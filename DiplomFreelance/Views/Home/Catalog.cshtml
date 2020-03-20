@@ -1,0 +1,29 @@
+﻿
+@model IEnumerable<DiplomFreelance.Models.FreelanceModels.Category>
+
+@{
+    ViewBag.Title = "Catalog";
+}
+
+<div class="container-fluid">
+    <h3 class="mb-4 mt-4">Каталог услуг</h3>
+    <div class="d-flex flex-row mt-4">
+        <div class="w-25">
+            <ul class="pl-4" style="list-style-type: none; font-size:1.2rem">
+                @foreach (var itemCategory in Model)
+                {
+                    <li class="mb-3">
+
+                        @Ajax.ActionLink(itemCategory.Name, "Catalog", "Home", new { nameCategory = itemCategory.Name }, new AjaxOptions { UpdateTargetId = "resultSubcategorys" })
+
+                        @*<a class="font-weight-bold" href="" style="font-size:18px">@itemCategory.Name</a>*@
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="w-75">
+            <div id="resultSubcategorys">
+            </div>
+        </div>
+    </div>
+</div>

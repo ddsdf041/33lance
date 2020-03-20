@@ -1,0 +1,367 @@
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.dll.config
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.pdb
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.exe
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.exe.config
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.rsp
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.exe
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.exe.config
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.rsp
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.AppContext.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Console.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Compression.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Pipes.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Claims.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.ValueTuple.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XPath.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.exe
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.exe.config
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.rsp
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\VBCSCompiler.exe
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Antlr3.Runtime.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\EntityFramework.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\EntityFramework.SqlServer.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Newtonsoft.Json.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Owin.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.Helpers.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.Mvc.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.Optimization.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.Razor.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Deployment.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Razor.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\WebGrease.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.Helpers.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.Mvc.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.Optimization.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.Razor.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Deployment.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Razor.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Newtonsoft.Json.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Antlr3.Runtime.pdb
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\EntityFramework.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\EntityFramework.SqlServer.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Razor.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\EntityFramework.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csprojAssemblyReference.cache
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csproj.CoreCompileInputs.cache
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csproj.CopyComplete
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.dll
+C:\Users\yourh\OneDrive\Рабочий стол\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.pdb
+D:\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.dll.config
+D:\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.dll
+D:\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.pdb
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.exe
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.exe.config
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.rsp
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.exe
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.exe.config
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.rsp
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.Managed.Core.targets
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.AppContext.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Collections.Immutable.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Console.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Compression.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.FileSystem.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Pipes.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Reflection.Metadata.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.AccessControl.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Claims.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Principal.Windows.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.ValueTuple.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XPath.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.exe
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.exe.config
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.rsp
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\VBCSCompiler.exe
+D:\DiplomFreelance\DiplomFreelance\bin\roslyn\VBCSCompiler.exe.config
+D:\DiplomFreelance\DiplomFreelance\bin\Antlr3.Runtime.dll
+D:\DiplomFreelance\DiplomFreelance\bin\EntityFramework.dll
+D:\DiplomFreelance\DiplomFreelance\bin\EntityFramework.SqlServer.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Google.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Web.Infrastructure.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Newtonsoft.Json.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Owin.dll
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.Helpers.dll
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.Mvc.dll
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.Optimization.dll
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.Razor.dll
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Deployment.dll
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.dll
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Razor.dll
+D:\DiplomFreelance\DiplomFreelance\bin\WebGrease.dll
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.Helpers.xml
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.Mvc.xml
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.Optimization.xml
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.Razor.xml
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.xml
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Deployment.xml
+D:\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Razor.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Newtonsoft.Json.xml
+D:\DiplomFreelance\DiplomFreelance\bin\EntityFramework.xml
+D:\DiplomFreelance\DiplomFreelance\bin\EntityFramework.SqlServer.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Google.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Helpers.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Mvc.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Optimization.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Razor.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\EntityFramework.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csprojAssemblyReference.cache
+D:\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csproj.CoreCompileInputs.cache
+D:\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csproj.CopyComplete
+D:\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.dll
+D:\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.pdb
+D:\DiplomFreelance\DiplomFreelance\bin\Iesi.Collections.dll
+D:\DiplomFreelance\DiplomFreelance\bin\NHibernate.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Remotion.Linq.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Remotion.Linq.EagerFetching.dll
+D:\DiplomFreelance\DiplomFreelance\bin\Antlr3.Runtime.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Iesi.Collections.xml
+D:\DiplomFreelance\DiplomFreelance\bin\NHibernate.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Remotion.Linq.xml
+D:\DiplomFreelance\DiplomFreelance\bin\Remotion.Linq.EagerFetching.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.dll.config
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\DiplomFreelance.pdb
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.exe
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.exe.config
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\csc.rsp
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.exe
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.exe.config
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\csi.rsp
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.AppContext.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Console.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Compression.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.IO.Pipes.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Claims.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.ValueTuple.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XPath.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.exe
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.exe.config
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\vbc.rsp
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\VBCSCompiler.exe
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Antlr3.Runtime.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\EntityFramework.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\EntityFramework.SqlServer.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Iesi.Collections.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Newtonsoft.Json.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\NHibernate.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Owin.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Remotion.Linq.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Remotion.Linq.EagerFetching.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.Helpers.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.Mvc.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.Optimization.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.Razor.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Razor.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\WebGrease.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Antlr3.Runtime.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Iesi.Collections.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\NHibernate.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Remotion.Linq.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Remotion.Linq.EagerFetching.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.Helpers.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.Mvc.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.Optimization.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.Razor.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\System.Web.WebPages.Razor.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Newtonsoft.Json.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\EntityFramework.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\EntityFramework.SqlServer.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.Razor.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\EntityFramework.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csprojAssemblyReference.cache
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csproj.CoreCompileInputs.cache
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.csproj.CopyComplete
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.dll
+C:\Users\kolom\Desktop\DiplomFreelance\DiplomFreelance\obj\Debug\DiplomFreelance.pdb

@@ -1,0 +1,13 @@
+﻿
+@model IEnumerable<DiplomFreelance.Models.FreelanceModels.Subcategory>
+
+<div class="container-fluid">
+    <div class="d-flex flex-row flex-wrap">
+        @foreach (var categorySub in Model)
+        {
+            <div class="w-25 ml-3 mr-3 mb-3 text-wrap">
+                <a class="text-dark" href="@Url.Action("Services","Home", new {IdSubcategory = categorySub.ID})" style="font-size:1.1rem">@categorySub.Name</a>
+            </div>
+        }
+    </div>
+</div>
