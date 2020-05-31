@@ -1,0 +1,35 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.SubcategoryViewModel
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6">
+            <h2>Создание подкатегории</h2>
+            <h5 class="text-muted">Категория: @Model.Category.Name</h5>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(x => x.Category.ID)
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <p class="control-label col-md-2">Наименование</p>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Создать" class="btn btn-success" /> |
+                            @Html.ActionLink("Назад", "SubcategoryView", new { id = Model.Category.ID }, new { @class = "btn btn-outline-secondary" })
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

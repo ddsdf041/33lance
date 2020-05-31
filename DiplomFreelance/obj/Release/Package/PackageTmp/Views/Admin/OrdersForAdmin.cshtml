@@ -1,0 +1,259 @@
+﻿@model PagedList.IPagedList<DiplomFreelance.Models.FreelanceModels.ViewModel.OrderViewModel>
+
+
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+<div class="container">
+    <div class=" mb-3 mt-5 ">
+        <a href="@Url.Action("ChooseCategoryOrder", "Admin")">Обратно к выбору подкатегории</a>
+    </div>
+    <div class="d-flex  flex-column ">
+        <div class="row no-gutters ">
+            <div class="card align-items-center  border-rounded shadow col-6 col-lg-8 col-md-12 col-sm-12 mt-3">
+                <div class="card-body align-items-center  ">
+                    <h1 class="text-center">Заказы</h1>
+                    <h3 class="text-center text-muted">Подкатегория: @ViewBag.Subcat</h3>
+                    @if (!(bool)Session["isBanned"])
+                    {
+                        <a class="btn align-self-center w-100 btn-outline-danger rounded-pill " href="@Url.Action("OrdersForAdmin", "Admin", new { isBanned = true, idSubcat = Session["idSubcat"] })">Показать список заблокированных заказов</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-outline-info w-100  rounded-pill" href="@Url.Action("OrdersForAdmin", "Admin", new { isBanned = false, idSubcat = Session["idSubcat"] })">Показать список НЕ заблокированных заказов</a>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-column">
+        @if (Model.Count() == 0)
+        {
+            <h2 class="text-muted font-weight-bold mt-5 mb-5">Список пуст</h2>
+        }
+        @foreach (var order in Model)
+        {
+            <div class="row no-gutters mt-3 ">
+                <div class="card border-rounded shadow col-6 col-lg-8 col-md-12 col-sm-12 mt-3">
+                    <div class="card-body ">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="col-8">
+                                <p class="card-title heading-def">@order.Name</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="col-8">
+                                <p>@order.Category • @order.Subcategory</p>
+                                <p><strong>Заказчик: </strong><a href="@Url.Action("CustomerProfile", "Admin", new { id = order.Customer.ID })">@order.Customer.Email</a></p>
+                            </div>
+                        </div>
+                        <div class="accordion" id="accordionDetailsOrder">
+
+                            <p class="mb-0 mt-0 text-center ">
+                                <button class="btn btn-link def-link-text collapsed font-weight-normal pl-0 text-decoration-none" data-toggle="collapse" data-target="#collapseDetailsOrder_@order.ID" aria-expanded="false" aria-controls="collapseOne">
+                                    Подробности <i class="fa fa-angle-double-down fa-lg " aria-hidden="true"></i>
+                                </button>
+                            </p>
+
+                            <div id="collapseDetailsOrder_@order.ID" class="collapse" data-parent="#accordionDetailsOrder">
+                                <hr />
+                                @if (order.Files.Count() > 0)
+                                {
+                                    <p class="xl-text font-weight-bold">Изображения</p>
+                                    <div class="row mt-3">
+                                        @foreach (var img in order.Files)
+                                        {
+                                            <div class="col-md-4">
+                                                @* <a class="example-image-link" href="@img.Image" data-lightbox="example-1"><img class="example-image" src="@img.Image" alt="image-1" /></a>*@
+                                                <a class="example-image-link" href="@img.Image" data-lightbox="roadtrip_@order.ID">
+                                                    <img class="img-responsive rounded w-100 example-image" src="@img.Image" name="Images" />
+                                                </a>
+
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <hr />
+                                }
+                                <p class="xl-text font-weight-bold">Подробная информация</p>
+                                <p class="xl-text text-muted">Заказ был опубликован @order.Date.ToShortDateString() в @order.Date.ToShortTimeString()</p>
+
+                                <p class="text-justify mt-3"><strong>Описание: </strong>@order.Description</p>
+                                @if (!String.IsNullOrEmpty(order.Address))
+                                {
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col">
+                                            <p>@order.Address</p>
+                                        </div>
+                                    </div>
+
+                                }
+                                else
+                                {
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col">
+                                            <p>@order.Place</p>
+                                        </div>
+                                    </div>
+                                }
+                                <div class="row">
+                                    <div class="col-1">
+                                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col">
+                                        <p>@order.Deadline.ToShortDateString()</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-1">
+                                        <i class="fa fa-rub" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col">
+                                        <p> @order.Budget</p>
+                                    </div>
+                                </div>
+                                <div class="accordion" id="accordionResponses">
+
+                                    <p class="mb-0 mt-0">
+                                        <button class="btn btn-link def-link-text collapsed font-weight-normal pl-0" data-toggle="collapse" data-target="#collapseRespons_@order.ID" aria-expanded="false" aria-controls="collapseOne">
+                                            <span class="badge badge-success">@order.Responses.Count()</span> Отклики исполнителей <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                        </button>
+                                    </p>
+
+                                    <div id="collapseRespons_@order.ID" class="collapse" data-parent="#accordionResponses">
+
+                                        @foreach (var response in order.Responses)
+                                        {
+                                            <div class="row border rounded-lg p-2 mr-1 ml-1 mt-2">
+                                                <div class="col-2">
+                                                    <img src="@response.Executor.Photo" alt="" class="img-responsive rounded w-100" />
+                                                    <p class="text-center h6"> <i class="fa fa-star" aria-hidden="true" style="color:#28a745"></i> @response.Executor.Raiting</p>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="d-flex">
+                                                        <a class="h5" href="@Url.Action("Executor", "Global", new { id = order.Executor.ID_User })">@response.Executor.Name</a>
+                                                        <p class="text-muted ml-auto">@response.Date.ToShortDateString()</p>
+
+                                                    </div>
+                                                    @*<p class="">Рейтинг: @response.Executor.Raiting</p>*@
+                                                    <p class="text-justify"><b>Сообщение от исполнителя: </b>@response.Notation</p>
+
+                                                    <p><b>Цена отклика: </b> @response.Price  <i class="fa fa-rub" aria-hidden="true"></i></p>
+
+                                                </div>
+                                            </div>
+                                        }
+
+                                    </div>
+                                </div>
+                                @switch (order.Status)
+                                {
+                                    case "Опубликован":
+
+
+                                        <hr />
+                                        <div class="row p-3">
+                                            <div class="col alert alert-info">
+                                                <p class="h4 text-center">Исполнитель отсутствует</p>
+                                            </div>
+                                        </div>
+
+                                        break;
+                                    case "Выполняется":
+
+                                        <hr />
+                                        <p class="h4">Исполнитель</p>
+                                        <div class="row border rounded-lg p-2 mr-1 ml-1 mt-3 mb-3">
+                                            <div class="col-2">
+                                                <img src="@order.Executor.Photo" alt="" class="img-responsive rounded w-100" />
+                                                <p class="text-center h6"> <i class="fa fa-star" aria-hidden="true" style="color:#28a745"></i> @order.Executor.Raiting</p>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex">
+                                                    <p class="h5">@order.Executor.Name</p>
+                                                </div>
+                                                <p class="">@order.Executor.Specialty</p>
+
+                                            </div>
+                                            <div class="col-12 bg-light p-2">
+                                                <div class="float-right">
+                                                    <a class="btn btn-outline-success rounded-pill float-right" href="@Url.Action("Executor", "Global", new { id = order.Executor.ID_User })"><i class="fa fa-user" aria-hidden="true"></i> Профиль</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        break;
+                                    case "Завершен":
+                                        <hr />
+                                        <div class="row p-3">
+                                            <div class="col alert alert-success">
+                                                <p class="h4 text-center">Заказ был завершен</p>
+                                            </div>
+                                        </div>
+                                        break;
+                                    case "Ожидание":
+
+                                        <hr />
+                                        <div class="row p-3">
+                                            <div class="col alert alert-warning">
+                                                <p class="h4 text-center">Ожидание согласия исполнителя</p>
+                                            </div>
+                                        </div>
+
+                                        break;
+                                    case "Отклонен":
+
+                                        <hr />
+                                        <div class="row p-3">
+                                            <div class="col alert alert-danger">
+                                                <p class="h4 text-center">Исполнитель отклонил заказ</p>
+                                            </div>
+                                        </div>
+
+                                        break;
+
+                                }
+                                @if (!order.IsBanned)
+                                {
+                                    <a class="btn btn-outline-danger rounded-pill mt-2" href="@Url.Action("BanOrder", "Admin", new { idOrder = order.ID,  isBanned = true })"><i class="fa fa-ban" aria-hidden="true"></i> Заблокировать</a>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-outline-warning rounded-pill mt-2" href="@Url.Action("BanOrder", "Admin", new { idOrder = order.ID,  isBanned = false })"><i class="fa fa-ban" aria-hidden="true"></i> Разблокировать</a>
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.PageCount > 1)
+        {
+            <p class="text-muted mt-5">Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount</p>
+
+            @Html.PagedListPager(
+                            Model,
+                            page => Url.Action("OrdersForAdmin", new
+                                 {
+                                     page,
+                                     isBanned = Session["isBanned"],
+                                     idSubcat = Session["idSubcat"]
+
+                            }))
+
+            @*@Html.PagedListPager(Model, page => Url.Action("Services", new { page, IdSubcategory = ViewBag.SubcatId }))*@
+        }
+
+
+    </div>
+</div>

@@ -1,0 +1,20 @@
+﻿
+    <div class="container">
+        <h2 class="mt-5 text-center">
+            Панель администратора
+        </h2>
+
+        <div class="btn-group mt-5 w-100" role="group" aria-label="">
+            <a href="@Url.Action("ChooseCategoryOrder", "Admin")" class="btn btn-lg btn-info"><h3>Заказы</h3> </a>
+            <a href="@Url.Action("CustomerForAdmin", "Admin")" class="btn btn-lg btn-info"><h3>Заказчики</h3> </a>
+            <a href="@Url.Action("ChooseCategory", "Admin")" class="btn btn-lg btn-info"><h3>Исполнители</h3> </a>
+            <a href="@Url.Action("CategoryView", "Admin")" class="btn btn-lg btn-info"><h3>Категории и подкатегории</h3> </a>
+        </div>
+        <div  class="mt-5 text-center">
+                <a href="@Url.Action("CustomerListForAdmin", "Admin")" class="text-center">Назначить администратором </a> <br />
+                <a href="@Url.Action("AdminList", "Admin")" class="text-center">Переназначить администратора</a>
+         
+        </div>
+    </div>
+
+

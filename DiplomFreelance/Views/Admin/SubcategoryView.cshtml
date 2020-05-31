@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DiplomFreelance.Models.FreelanceModels.ViewModel.SubcategoryViewModel>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-8">
+                <h2>Подкатегории категории @ViewBag.Name</h2>
+
+                <p>
+                    @Html.ActionLink("Создать подкатегорию", "CreateSubcategory", new { id = Model.First().Category.ID }, new { @class = "btn btn-info" }) |
+              
+                    @Html.ActionLink("Назад", "CategoryView", null, new { @class = "btn btn-outline-secondary" })
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            Наименование
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    @if (item.ID != 0)
+                    {
+                        <td>
+
+                            @Html.ActionLink("Изменить", "EditSubcategory", new { id = item.ID, idCat = Model.First().Category.ID }, new { @class = "btn btn-outline-dark" })
+                            |
+                            @Html.ActionLink("Удалить", "DeleteSubcategory", new { id = item.ID, idCat = Model.First().Category.ID }, new { @class = "btn btn-outline-danger" })
+                        </td>
+                    }
+                </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>

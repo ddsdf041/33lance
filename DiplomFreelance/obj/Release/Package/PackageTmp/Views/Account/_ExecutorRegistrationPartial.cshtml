@@ -1,0 +1,98 @@
+﻿@model DiplomFreelance.Models.ExecutorRegisterViewModel
+
+
+@using (Html.BeginForm("RegisterExecutor", "Account", FormMethod.Post, new { @class = "form-horizontal col-lg-6 col-md-10 col-sm-12", role = "form", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <h4 class="mt-4 mb-4">Создание новой учетной записи исполнителя</h4>
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Speciality, new { @class = "control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Speciality, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Phone, new { @class = "control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Descripton, new { @class = "control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.Descripton, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Pic" class="btn-link"><i class="fa fa-clipboard mr-2 m-2" aria-hidden="true"></i> Добавить изображение</label>
+        <input type="file" id="Pic" class="col-md-10" name="PhotoFile" style="display:none" value="Добавить новое фотографию" onchange="loadFile(event)" />
+    </div>
+
+    <img class="m-3" height="200" id="output" />
+    <script>
+                        var loadFile = function (event) {
+                            var reader = new FileReader();
+
+                            reader.onload = function () {
+                                var output = document.getElementById('output');
+                                output.src = reader.result;
+                            };
+                            reader.readAsDataURL(event.target.files[0]);
+                        };
+    </script>
+    @*<div class="form-group">
+        <input class="col-md-10" type="file" name="Photo" value="Добавить фотографию" />
+    </div>*@
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.City, new { @class = "control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        </div>
+    </div>
+    @*all*@
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-outline-success w-50 rounded-pill" value="Регистрация" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

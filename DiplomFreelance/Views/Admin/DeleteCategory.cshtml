@@ -1,0 +1,35 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.CategoryViewModel
+
+
+<div class="container mt-5 ">
+    <div class="row">
+        <div class="col-6">
+            <h3>Вы уверены, что хотите удалить эту категорию?</h3>
+            <div>
+                <h5 class="text-muted">Удаление произойдет только в том случае, если к данной категории не привязаны подкатегории </h5>
+                <h6 class="text-muted">А к подкатегориям, в свою очередь, не привязаны заказы и услуги</h6>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Наименование
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Удалить" class="btn btn-danger" />  |
+                        @Html.ActionLink("Назад", "CategoryView", null, new { @class = "btn btn-outline-secondary" })
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

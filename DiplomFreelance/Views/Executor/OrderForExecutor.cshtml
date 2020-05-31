@@ -1,0 +1,73 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.OrderForExecutorViewModel
+
+@Scripts.Render("~/scripts/orderScripts.js")
+
+<div class="container">
+    <h1 class="mt-5">Заказы, Подкатегория: Все</h1>
+
+    <div class="row mt-3 btn-group btn-group-toggle pl-3 pr-3" data-toggle="buttons">
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2 active">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatusExecutor()" value="1" id="optionStatus1" autocomplete="off" checked> Новые заказы
+        </label>
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatusExecutor()" value="2" id="optionStatus2" autocomplete="off"> На выполнении
+        </label>
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatusExecutor()" value="3" id="optionStatus3" autocomplete="off"> Выполненые
+        </label>
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatusExecutor()" value="4" id="optionStatus4" autocomplete="off"> Мои отклики
+        </label>
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatusExecutor()" value="5" id="optionStatus5" autocomplete="off"> Предложенные
+        </label>
+    </div>
+
+    <div class="row mt-5 pl-0">
+        <div class="col-8">
+            <div class="mb-5" id="loaderOrdersForEx" style="display: none;">
+                <div class="d-flex justify-content-center">
+                    <h2 class="text-muted font-weight-bold align-middle">Получение данных...</h2>
+                    <div class="spinner-grow text-secondary ml-3 align-middle" role="status" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="d-flex flex-column" id="OrdersResult">
+                @Html.Partial("_OrderForExecutorPartial", Model.Orders)
+            </div>
+        </div>
+
+        <div class="col-4 pl-4">
+            @foreach (var item in Model.Categories)
+            {
+                <h4 class="text-dark">@item.Name</h4>
+
+                <ul style="list-style-type: none;">
+
+                    @foreach (var itemsub in item.Subcategories)
+                    {
+                        <li>@Ajax.ActionLink(itemsub.Name, "OrderForExecutor","Executor", new { Subcategory = itemsub.Name }, new AjaxOptions {  HttpMethod = "GET", UpdateTargetId = "OrdersResult",  LoadingElementId = "loaderOrdersForEx" })</li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style="overflow-y: scroll">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Выбор категории</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                @*@Html.Partial("_ServiceCategoryPartial", Model.categoryViewModels)*@
+            </div>
+        </div>
+    </div>
+</div>

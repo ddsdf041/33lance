@@ -1,0 +1,112 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.CustomerForAdminViewModel
+<script type="text/javascript">
+    function ShowDetails() {
+        $('#orderDetails').modal('show');
+    }
+</script>
+<div class="container mb-3 mt-5 ">
+    <a href="@Url.Action("CustomerForAdmin", "Admin")">Обратно к списку заказчиков</a>
+</div>
+<div class="container">
+
+
+    <div class="d-flex flex-column ">
+        <div class="row no-gutters align-items-center ">
+            <div class="card border-rounded shadow col-6 col-lg-8 col-md-12 col-sm-12 mt-3">
+                <div class="card-body align-self-center">
+                    <div class="">
+                        <p class="h3">Профиль заказчика: @Model.Customer.Name</p>
+                    </div>
+                    <div class="">
+                        <p class="h5"><b>Email:</b> @Model.Customer.Email</p>
+
+                    </div>
+                    <div class="">
+                        @if (!Model.Customer.IsBanned)
+                        {
+                            <a class="btn btn-outline-danger rounded-pill mt-2" href="@Url.Action("BanCustomer", "Admin", new { id = Model.Customer.ID,  isBanned = true })"><i class="fa fa-ban" aria-hidden="true"></i> Заблокировать заказчика</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-outline-warning rounded-pill mt-2" href="@Url.Action("BanCustomer", "Admin", new { id = Model.Customer.ID,  isBanned = false })"><i class="fa fa-ban" aria-hidden="true"></i> Разблокировать заказчика</a>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row no-gutters mt-3 ">
+        <div class="card border-rounded shadow col-6 col-lg-8 col-md-12 col-sm-12 mt-3">
+            <div class="card-body ">
+                <div class="h-100 accordion" id="accordionCategory">
+                    <div class="rounded-lg p-3">
+                        <div class="d-flex flex-row align-items-center def-link-text" data-toggle="collapse" data-target="#collapseCategory" aria-expanded="false" aria-controls="collapseOne">
+                            <div class="col-8">
+                                <h3 class="text-dark">Все заказы</h3>
+                            </div>
+                            <div class="col">
+                                <i class="fa fa-chevron-down fa-2x float-right text-muted" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <div id="collapseCategory" class="collapse p-2" data-parent="#accordionCategory">
+                            @if (Model.Orders.Count() != 0)
+                            {
+                                foreach (var item in Model.Orders.OrderByDescending(x => x.Date))
+                                {
+                                    <hr />
+                                    <div class="row p-2">
+                                        <div class="col-8 ">
+                                            @if (item.IsBanned)
+                                            {
+                                                <p class="btn btn-outline-danger mr-1" title="Статус: заблокировано"><i class="fa fa-ban" aria-hidden="true"></i></p>
+                                            }
+                                            else
+                                            {
+                                                <p class="btn btn-outline-success mr-1" title="Статус: НЕ заблокировано"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                                            }
+
+                                            @Ajax.ActionLink(item.Name, "_OrderDetailsPartial", "Admin",
+                                                        new { idOrder = item.ID },
+                                                        new AjaxOptions { UpdateTargetId = "detailsOrder", OnComplete = "ShowDetails()" }, htmlAttributes: new { @class = "h2" })
+
+
+                                        </div>
+                                        <div class="col-8 mt-2">
+                                            <h6><strong>Описание: </strong>@item.Description</h6>
+                                        </div>
+                                    </div>
+
+                                }
+                            }
+                            else
+                            {
+                                <div class="row p-2">
+                                    Заказы отсутствуют
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modal ServiceDetails-->
+<div class="modal fade " id="orderDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalNameService">Подробнее о заказе</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="detailsOrder">
+
+            </div>
+        </div>
+    </div>
+</div>
+ </div>

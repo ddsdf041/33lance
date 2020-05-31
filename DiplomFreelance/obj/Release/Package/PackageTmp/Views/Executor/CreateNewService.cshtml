@@ -1,0 +1,151 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.CreateServiceViewModel
+
+@Scripts.Render("~/scripts/orderScripts.js")
+
+
+<div class="container">
+<div class="row  ">
+    <div class="col-lg-6 col-md-9 col-sm-12 border-rounded shadow rounded-lg p-4 mt-5 mr-2">
+        @using (Html.BeginForm("CreateNewService", "Executor", FormMethod.Post, new { @class = "w-100", id = "UpdateForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <p class="font-weight-bold" style="font-size:1.5em">Добавление услуги</p>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, "Название", htmlAttributes: new { @class = "control-label" })
+                    <div class="">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Укажите название" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Time_work, "Время исполнения", htmlAttributes: new { @class = "control-label" })
+                    <div class="">
+                        @Html.EditorFor(model => model.Time_work, new { htmlAttributes = new { @class = "form-control", placeholder = "За какое время вы выполните свою услугу" } })
+                        @Html.ValidationMessageFor(model => model.Time_work, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Expirience, "Опыт работы", htmlAttributes: new { @class = "control-label" })
+                    <div class="">
+                        @Html.EditorFor(model => model.Expirience, new { htmlAttributes = new { @class = "form-control", placeholder = "Опишите свой опыт работы в данной сфере" } })
+                        @Html.ValidationMessageFor(model => model.Expirience, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Notation, "Описание", htmlAttributes: new { @class = "control-label" })
+                    <div class="">
+                        <textarea class="form-control" name="Notation" id="DescriptionOrder" placeholder="Подробное описание того, какую услугу вы оказываете" required>@Model.Notation</textarea>
+                        @Html.ValidationMessageFor(model => model.Notation, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+                <div class="form-group mt-2">
+                    <label for="PriceOrder">Стоимость</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="Price" id="PriceOrder" value="@Model.Price" placeholder="Цена, за которую вы выполняете услугу" required>
+                        <div class="input-group-append">
+
+                            <select class="custom-select alert-success" name="ID_Measure" id="measure">
+                                <option value="1">За услугу</option>
+                                <option value="2">За единицу</option>
+                                <option value="3">За час</option>
+                                <option value="4">За кг</option>
+                                <option value="5">За метр</option>
+                                <option value="6">За км</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="btn-group btn-group-toggle mt-2 w-100" data-toggle="buttons">
+                    <label class="col-4 btn bttn-radio rounded-pill mr-2">
+                        <input type="radio" name="ID_Place" value="1" onchange="selectPlace()" id="option3" autocomplete="off" checked> Удаленно
+                    </label>
+                    <label class="col-4 btn bttn-radio rounded-pill mr-2">
+                        <input type="radio" name="ID_Place" value="2" onchange="selectPlace()" id="option2" autocomplete="off"> У меня
+                    </label>
+                    <label class="col-4 btn bttn-radio rounded-pill mr-2">
+                        <input type="radio" name="ID_Place" value="6" onchange="selectPlace()" id="option4" autocomplete="off"> У заказчика
+                    </label>
+                    <label class="col-4 btn bttn-radio rounded-pill ">
+                        <input type="radio" name="ID_Place" value="3" onchange="selectPlace()" id="option1" autocomplete="off"> Указать место
+                    </label>
+                </div>
+
+
+                <div id="place">
+                    <div class="form-group mt-2">
+                        <label for="AddressOrder">Адрес</label>
+                        <input type="text" class="form-control" name="Address" id="AddressOrder" placeholder="Город, улица, дом" required>
+                    </div>
+                </div>
+
+                <div class="form-inline mt-2">
+                    <label for="SubcategoryOrder" id="nameSubcategory" class="control-label">Пожалуйста выберите категорию</label>
+                    <a class="form-control rounded-pill ml-auto" id="SubcategoryOrder" data-toggle="modal" data-target="#exampleModalCenter">Категория</a>
+                    <input type="hidden" id="selectedSubcategory" name="ID_Subcategory" />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <input class="form-control rounded-pill btn-outline-success w-50 mx-auto" type="submit" id="SendOrder" value="Создать услугу" style="font-size:1.2em" />
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content" style="overflow-y: scroll">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Выбор категории</h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            @Html.Partial("_ServiceCategoryPartial", Model.categoryViewModels)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+</div>
+<script type="text/javascript">
+
+    //var inp = document.getElementsByName('ID_Measure');
+    var select = document.querySelector('#measure').getElementsByTagName('option');
+    for (var i = 0; i < select.length; i++) {
+
+        if (select[i].value == @Model.ID_Measure) {
+            select[i].setAttribute('selected', true);
+        }
+    }
+
+    //var rad = document.getElementsByName('ID_Place');
+    var rad = $('input[name="ID_Place"]');
+
+    //var radios = $('input[name="ID_Place"]');
+    for (var i = 0; i < rad.length; i++) {
+
+        if (rad[i].value == @Model.ID_Place) {
+
+            rad[i].setAttribute('checked', 'checked');
+            rad[i].parentElement.classList.add('active');
+        }
+    }
+</script>

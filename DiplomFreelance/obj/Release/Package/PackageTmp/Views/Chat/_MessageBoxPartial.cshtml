@@ -1,0 +1,29 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.MessageDialogViewModel
+@using Microsoft.AspNet.Identity
+
+
+@if (Model == null || Model.messages.Count() == 0)
+{
+    <p class="text-center text-muted my-auto">
+        Диалог пуст
+    </p>
+}
+else
+{
+    foreach (var msg in Model.messages.OrderBy(x => x.Time_send))
+    {
+        if (msg.Sender == User.Identity.GetUserId())
+        {
+            <p class="text-left alert-secondary text-break ml-auto mr-1 border messagePill">
+                @msg.Text
+            </p>
+        }
+        else
+        {
+            <p class="text-left text-break mr-auto ml-1 border messagePill">
+                @msg.Text
+            </p>
+        }
+
+    }
+}

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<DiplomFreelance.Models.FreelanceModels.ViewModel.CategoryViewModel>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-8">
+                <h2>Категории и подкатегории</h2>
+                <p>
+                    @Html.ActionLink("Создать категорию", "CreateCategory", null, new { @class = "btn btn-info " }) |
+                    @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-outline-secondary " })
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            Наименование категории
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Подкатегории", "SubcategoryView", new { id = item.ID }, new { @class = "btn btn-outline-secondary" }) |
+                                @Html.ActionLink("Изменить", "EditCategory", new { id = item.ID }, new { @class = "btn btn-outline-dark" }) |
+                                @Html.ActionLink("Удалить", "DeleteCategory", new { id = item.ID }, new { @class = "btn btn-outline-danger" })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+        </div>
+    </div>

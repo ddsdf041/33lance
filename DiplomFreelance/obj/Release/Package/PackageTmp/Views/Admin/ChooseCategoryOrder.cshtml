@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DiplomFreelance.Models.FreelanceModels.ViewModel.CategoryViewModel>
+    <div class="container mb-3 mt-5 ">
+        <a href="@Url.Action("Index", "Admin")">Обратно к панели администратора</a>
+    </div>
+
+
+    <div class="container">
+        <div class="border-def rounded-lg mt-5 p-4">
+            <h2 class="mt-2">Выберите подкатегорию, в которой необходимо просмотреть заказы</h2>
+            @foreach (var item in Model)
+            {
+                <h4 class="text-dark">@item.Name</h4>
+
+                <ul style="list-style-type: none;">
+
+                    @foreach (var itemsub in item.Subcategories)
+                    {
+                        <li><a href="@Url.Action("OrdersForAdmin", "Admin", new { idSubcat = itemsub.ID })">@itemsub.Name</a></li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>

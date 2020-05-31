@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DiplomFreelance.Models.FreelanceModels.ViewModel.ChatViewModel>
+
+<div class="row h-100 p-2">
+    <div class="col-4 border-right" id="chatBox" style="overflow-y: auto;">
+        @foreach (var chat in Model)
+        {
+            if (User.IsInRole("Customer"))
+            {
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="@chat.Executor.Photo" alt="" class="img-responsive rounded-circle w-100" />
+                    </div>
+                    <div class="col">
+                        @Ajax.ActionLink(chat.Executor.Name, "DialogPartial", new { idChat = chat.ID }, new AjaxOptions
+                      {
+                          UpdateTargetId = "resultMessages"
+                
+                      })
+                    </div>
+                </div>
+                <hr />
+            }
+            else
+            {
+            
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="https://i.imgur.com/zi528VL.png" alt="" class="img-responsive rounded-circle w-100" />
+                    </div>
+                    <div class="col">
+                        @Ajax.ActionLink(chat.Customer.Name, "DialogPartial", new { idChat = chat.ID }, new AjaxOptions
+                      {
+                          UpdateTargetId = "resultMessages"
+                        
+                      })
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+    </div>
+    <div class="col pl-0 h-100" id="resultMessages">
+    
+        @*@{ Html.RenderAction("MessagePartial", "Home"); }*@
+    </div>
+</div>
+

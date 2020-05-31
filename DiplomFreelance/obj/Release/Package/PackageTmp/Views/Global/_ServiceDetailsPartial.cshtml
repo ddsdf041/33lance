@@ -1,0 +1,48 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.ServiceViewModel
+
+<h4>@Model.Name</h4>
+<p class="text-muted">@Model.NameCategory • @Model.NameSubcategory</p>
+<p class="text-justify">@Model.Notation</p>
+<p><b>Опыт: </b> @Model.Expirience</p>
+@if (!String.IsNullOrEmpty(Model.Address))
+{
+    <div class="row">
+        <div class="col-1">
+            <i class="fa fa-map-marker text-muted" aria-hidden="true"></i>
+        </div>
+        <div class="col">
+            <p>@Model.NamePlace • @Model.Address</p>
+        </div>
+    </div>
+
+}
+else
+{
+    <div class="row">
+        <div class="col-1">
+            <i class="fa fa-map-marker text-muted" aria-hidden="true"></i>
+        </div>
+        <div class="col">
+            <p>@Model.NamePlace</p>
+        </div>
+    </div>
+}
+<div class="row">
+    <div class="col-1">
+        <i class="fa fa-calendar-check-o text-muted" aria-hidden="true"></i>
+    </div>
+    <div class="col">
+        <p>@Model.Time_work</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+        <i class="fa fa-rub text-muted" aria-hidden="true"></i>
+    </div>
+    <div class="col">
+        <p>@Model.Price</p>
+    </div>
+</div>
+
+<hr/>
+<a class="btn btn-outline-success rounded-pill mt-2" href="@Url.Action("Order", "Customer", new { idexec = Model.ID_Executor })">Предложить заказ</a>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DiplomFreelance.Models.FreelanceModels.ViewModel.OrderViewModel>
+
+@Scripts.Render("~/scripts/orderScripts.js")
+
+
+
+@if (!String.IsNullOrEmpty(ViewBag.Result))
+{
+    <div class="alert alert-info" role="alert" id="notification">
+        @ViewBag.Result
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+<div class="container">
+    <h1 class="mt-5">Заказы</h1>
+
+    <div class="row mt-3 btn-group btn-group-toggle pl-3 pr-3" data-toggle="buttons">
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2 active">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatus()" value="1" id="optionStatus1" autocomplete="off" checked> Опубликованные
+        </label>
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatus()" value="2" id="optionStatus2" autocomplete="off"> Выполняются
+        </label>
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatus()" value="3" id="optionStatus3" autocomplete="off"> Завершенные
+        </label>
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatus()" value="4" id="optionStatus4" autocomplete="off"> Ожидание
+        </label>
+        <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatus()" value="5" id="optionStatus5" autocomplete="off"> Отклонены
+        </label>
+        <label class="col-auto col-md-4 btn bttn-radio rounded-pill mr-2 mt-2">
+            <input type="radio" name="SelectStatusOrder" onchange="selectStatusBanned()" id="optionStatus6" autocomplete="off">Заблокированные <span class="badge alert-light">@ViewBag.CountBannedOrders</span>
+        </label>
+    </div>
+
+    <div class="d-none flex-row mt-5" id="loaderOrder">
+        <h2 class="text-muted font-weight-bold align-middle">Получение данных...</h2>
+        <div class="spinner-grow text-secondary ml-3 align-middle" role="status" aria-hidden="true"></div>
+    </div>
+
+    <div class="d-flex flex-column" id="resultMyOrders">
+        @Html.Partial("_MyOrdersPartial", Model)
+    </div>
+</div>

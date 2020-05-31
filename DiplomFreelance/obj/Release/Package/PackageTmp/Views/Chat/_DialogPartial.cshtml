@@ -1,0 +1,67 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.MessageDialogViewModel
+@using Microsoft.AspNet.Identity
+
+<script type="text/javascript">
+
+        $("#ajaxForm").submit(function () {
+      $.ajax({
+        url: '/Chat/SendMessage',
+        type: "POST",
+        cache: false,
+        data: $(this).serialize(),
+        success: function (data) {
+          $('#messageBox').html(data);
+        
+        }
+      });
+          
+      var form = this;
+      form.reset();
+      var scrollDiv = document.getElementById("messageBox");
+      var valueScroll = scrollDiv.scrollHeight;
+      scrollDiv.scrollTo(0, valueScroll);
+      return false; // !!!
+      
+    });
+
+    function UpdateMsg()
+    {
+        var scrollDiv = document.getElementById("messageBox");
+        var valueScroll = scrollDiv.scrollTop;
+        var data = @Model.ID_Chat
+            $.ajax({
+                url: '/Chat/MessageBoxPartial',
+                data: { 'idChat' : data},
+                cache: false,
+                success: function(html){
+                    $("#messageBox").html(html);
+                }
+            });
+              
+        scrollDiv.scrollTo(0, valueScroll);
+    }
+
+    $(document).ready(function(){
+        setInterval('UpdateMsg()', 5000);
+
+    });
+
+    var scrollDiv = document.getElementById("messageBox");
+    scrollDiv.scrollTo(0, scrollDiv.scrollHeight);
+</script>
+
+
+<div class="d-flex flex-column" id="messageBox">
+        @Html.Partial("_MessageBoxPartial", Model)
+</div>
+    <div class="d-flex align-content-center border-top p-2" id="sendForm">
+        <form id="ajaxForm" class = "form-inline">
+            <div class="input-group w-100">
+                <input type="text" class="form-control" name="Text" aria-multiline="true" contenteditable="true" role="textbox" placeholder="Введите сообщение" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <button class="btn bttn btn-outline-success rounded" type="submit" id="basic-addon1"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <input type="hidden" name="ID_Chat" value="@Model.ID_Chat" />
+        </form>
+    </div>

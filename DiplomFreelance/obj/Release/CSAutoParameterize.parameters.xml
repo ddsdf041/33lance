@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Server=tcp:serverfreelance.database.windows.net,1433;Initial Catalog=33lanceidentity;Persist Security Info=False;User ID=diplom_freelance_admin;Password=121Qwe!!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kolom\\Desktop\\Последняя\ вресия\\DiplomFreelance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="FreelanceConnection-Web.config Connection String" description="FreelanceConnection Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Server=tcp:serverfreelance.database.windows.net,1433;Initial Catalog=freelance;Persist Security Info=False;User ID=diplom_freelance_admin;Password=121Qwe!!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kolom\\Desktop\\Последняя\ вресия\\DiplomFreelance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='FreelanceConnection']/@connectionString" />
+  </parameter>
+</parameters>

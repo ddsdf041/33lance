@@ -1,0 +1,135 @@
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.ExecutorViewModel
+
+<script type="text/javascript">
+    function ShowDetails() {
+        $('#servicesDetails').modal('show');
+    }
+</script>
+
+@if (!String.IsNullOrEmpty(ViewBag.Message))
+{
+    <div class="alert alert-info mt-1 container" role="alert" id="notification">
+        @ViewBag.Message
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+<div class="container">
+
+
+    <div class="row mt-5">
+        <div class="col-3">
+            <div class="border-def rounded-lg">
+                <a href="@Url.Action("ChangeExecutorProfile", "Manage")"> <img title="Редактирование профиля" src="@Model.Photo" class="img-responsive rounded-lg w-100 h-100" /></a>
+                <p class="h5 text-center mt-2">@Model.Name</p>
+                <p class="font-weight-bold text-center"> <i class="fa fa-star fa-spin success" aria-hidden="true" style="color:#28a745"></i>  @Model.Raiting</p>
+
+               
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="border-def rounded-lg p-3 h-100">
+                <h4 class="text-center">Основная информация</h4>
+                <hr />
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <p class=""><b>Телефон:</b></p>
+                    </div>
+                    <div class="col">
+                        <p class="">@Model.Telephone</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <p class=""><b>Email:</b></p>
+                    </div>
+                    <div class="col">
+                        <p class="">@Model.Email</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <p class=""><b>Образование:</b></p>
+                    </div>
+                    <div class="col">
+                        <p class="">@Model.Specialty</p>
+                    </div>
+                </div>
+                <h4 class="text-center">О себе</h4>
+                <p>@Model.Description</p>
+                <div>
+                    <a class="" href="@Url.Action("ChangeExecutorProfile", "Manage")"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Изменить профиль</a>
+                    <a href="@Url.Action("ChangePassword","Manage")" class="" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Изменить пароль аккаунта</a>
+                </div> 
+               
+            </div>
+        </div>
+    </div>
+
+    @foreach (var item in Model.Services.GroupBy(x => new { ID_Category = x.ID_Category, NameCategory = x.NameCategory }))
+    {
+
+        <div class="row mt-3 ">
+            <div class="offset-3 col-8 accordion" id="accordionCategory">
+                <div class="border-def rounded-lg p-3">
+                    <div class="d-flex flex-row align-items-center def-link-text" data-toggle="collapse" data-target="#collapseCategory_@item.Key.ID_Category" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="col-8">
+                            <h3 class="text-dark">@item.Key.NameCategory</h3>
+                        </div>
+                        <div class="col">
+                            <i class="fa fa-chevron-down fa-2x float-right text-muted" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div id="collapseCategory_@item.Key.ID_Category" class="collapse p-2" data-parent="#accordionCategory">
+                        @foreach (var itemService in item)
+                        {
+                            <hr />
+                            <div class="row p-2">
+                                <div class="col-8 ">
+
+                                    @Ajax.ActionLink(itemService.Name, "_ServiceDetailsPartial", "Executor",
+                                    new { id = itemService.ID },
+                                    new AjaxOptions { UpdateTargetId = "resultDetails", OnComplete = "ShowDetails()" }, htmlAttributes: new { @class = "h4" })
+
+                                </div>
+                                <div class="col-8">
+                                    <p class="">@itemService.NameSubcategory </p>
+                                </div>
+                                <div class="col-8">
+                                    <p class="">@itemService.Price <i class="fa fa-rub" aria-hidden="true"></i></p>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="row mt-3">
+        <a class="offset-3 col-8 text-decoration-none" href="@Url.Action("CreateNewService", "Executor")">
+            <div class="border-dash rounded-lg p-3">
+                <h4 class="text-center text-uppercase text-muted font-weight-bold ">Добавить новую услугу</h4>
+            </div>
+        </a>
+    </div>
+
+    <!-- Modal ServiceDetails-->
+    <div class="modal fade " id="servicesDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalNameService">Подробнее об услуге</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="resultDetails">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DiplomFreelance.Models.FreelanceModels.ViewModel.CustomerViewModel>
+
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-8">
+            <h2>Назначение роли администратора для пользователя</h2>
+            <h5>Для того, чтобы назначить пользователя администратором, необходимо, чтобы пользователь зарегистрировался в роли ЗАКАЗЧИКА, после чего необходимо выбрать его в этом списке.</h5>
+
+           @using (Html.BeginForm("CustomerListForAdmin", "Admin", FormMethod.Get))
+            { 
+        <div class="row m-4">
+            <input type="text" class="form-control col-4 mr-2" placeholder="Email пользователя" name="email" />
+            <input type="submit" class="btn btn-outline-success col-2" value="Поиск" />
+        </div>
+               
+
+            }
+
+            <table class="table">
+                <tr>
+                    <th>
+                        Имя
+                    </th>
+                    <th>
+                        Почта
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Назначить", "GetRoleAdmin", new { idCustomer = item.ID })
+                        </td>
+                    </tr>
+                    }
+
+            </table>
+        </div>
+    </div>
+</div>
