@@ -141,7 +141,7 @@
 
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                <div class="row mt-4 p-4 border-rounded shadow col-lg-8 col-md-12">
+                <div class="row mt-5 p-4 border-rounded shadow col-lg-8 col-md-12">
                     <div class="col">
                         <h2 class="font-weight-bold ">Оставьте свой отклик</h2>
                         <div class="form-group mt-3">
@@ -162,7 +162,7 @@
         else
         {
 
-            <div class="row mt-5 p-4 bg-light rounded-lg shadow col-lg-8 col-md-12">
+            <div class="row mt-5 p-4 border-rounded shadow col-lg-8 col-md-12">
                 <div class="col">
                     <h2 class="font-weight-bold ">Вы оставили отклик</h2>
                     <p><b>Ваш отклик: </b>@Model.ResponseVM.Notation</p>
@@ -182,7 +182,7 @@
     }
     else if (Model.Order.ID_Status == 3)
     {
-        <div class="row mt-5 p-4 bg-light rounded-lg shadow col-lg-8 col-md-12">
+        <div class="row mt-5 p-4 border-rounded shadow col-lg-8 col-md-12">
             <div class="col">
                 <p> <strong class="h5">Заказ завершен</strong> </p>
             </div>
@@ -190,10 +190,10 @@
     }
     else if (Model.Order.ID_Status == 2)
     {
-        <div class="row mt-5 p-4 bg-light rounded-lg shadow col-lg-8 col-md-12">
+        <div class="row mt-5 p-4 border-rounded shadow col-lg-8 col-md-12">
             <div class="col">
                 <p> <strong class="h5">Вас выбрали исполнителем заказа</strong></p>
-                <a class="btn btn-outline-info rounded-pill mt-2" onclick="OpenChat('@Model.Order.ID_Customer')" href="#">Чат с этим заказчиком</a>
+                <a class="btn btn-outline-info rounded-pill mt-2" onclick="OpenChat('@Model.Order.Customer.ID')" href="#">Чат с этим заказчиком</a>
                 <a href="@Url.Action("CompleteOrder", "Executor", new { idOrder = Model.Order.ID })" class="btn btn-outline-danger text-danger rounded-pill mt-2">Закончить заказ</a>
             </div>
         </div>

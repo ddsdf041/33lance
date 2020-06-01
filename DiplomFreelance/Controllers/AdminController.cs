@@ -296,6 +296,10 @@ namespace DiplomFreelance.Controllers
         {
             //
 
+            if ("d68af5c7-0522-407a-8baa-a3abd771e79a" == idAdmin && idAdmin== User.Identity.GetUserId())
+                return RedirectToAction("AdminList");
+
+
             var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
             userManager.RemoveFromRole(idAdmin, "Admin");
             userManager.AddToRole(idAdmin, "Customer");

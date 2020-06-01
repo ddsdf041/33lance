@@ -1,7 +1,7 @@
 ﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.ExecutorViewModel
 
-@Scripts.Render("~/scripts/orderScripts.js")
 
+@Scripts.Render("~/scripts/executorScripts.js")
 
 <div class="container">
     <div class="col-lg-6 col-md-9 col-sm-12 border shadow rounded-lg p-4 mt-5 mr-2">
@@ -11,78 +11,71 @@
             {
                 @Html.AntiForgeryToken()
 
-            <div class="form-horizontal w-100">
-                <h2 class="text-center">Изменение профиля исполнителя</h2>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                @Html.HiddenFor(model => model.ID_User)
+                <div class="form-horizontal w-100">
+                    <h2 class="text-center">Изменение профиля исполнителя</h2>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.ID_User)
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Photo, "Фото профиля", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <label for="Pic" class="btn-link"><i class="fa fa-clipboard mr-2 m-2" aria-hidden="true"></i> Добавить изображение</label>
-                    <input type="file" id="Pic" class="col-md-10" name="PhotoFile" style="display:none" value="Добавить новое фотографию" onchange="loadFile(event)" />
-                </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Photo, "Фото профиля", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <label for="Pic" class="btn-link"><i class="fa fa-clipboard mr-2 m-2" aria-hidden="true"></i> Добавить изображение</label>
+                        <input type="file" id="Pic" class="col-md-10" name="PhotoFile" style="display:none" value="Добавить новое фотографию"/>
+                    </div>
 
-                <img class="m-3" height="200" id="output" src="@Model.Photo" />
-                <script>
-                    var loadFile = function (event) {
-                        var reader = new FileReader();
+                    @*<img class="m-3" height="200" id="output" src="@Model.Photo" />*@
+                    <div class="form-inline d-flex flex-row mt-2" id="pics">
 
-                        reader.onload = function () {
-                            var output = document.getElementById('output');
-                            output.src = reader.result;
-                        };
-                        reader.readAsDataURL(event.target.files[0]);
-                    };
-                </script>
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Name, "Имя", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, "Имя", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.City, "Город", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Specialty, "Образование", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Specialty, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Specialty, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Telephone, "Телефон", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Telephone, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description, "Описание", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <textarea class="form-control" name="Description" id="DescriptionExecutor" placeholder="Расскажите об опыте работы, о своих проектах" required>@Model.Description</textarea>
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Сохранить" class="form-control rounded-pill btn-outline-success w-50 mx-auto" />
+                        </div>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.City, "Город", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Specialty, "Образование", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Specialty, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Specialty, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Telephone, "Телефон", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Telephone, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Description, "Описание", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        <textarea class="form-control" name="Description" id="DescriptionExecutor" placeholder="Расскажите об опыте работы, о своих проектах" required>@Model.Description</textarea>
-                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-             
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Сохранить" class="form-control rounded-pill btn-outline-success w-50 mx-auto" />
-                    </div>
-                </div>
-            </div>
             }
         </div>
     </div>
