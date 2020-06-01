@@ -11,7 +11,7 @@ namespace DiplomFreelance.Controllers.BusinessLogic.IService
     public interface IServiceExecutor
     {
         List<DomainExecutor> GetExecutorsByIdSubcategory(int idsubcategory);
-        List<DomainExecutor> GetExecutorsForServicesViewByNameSubcategory(string nameSubcategory);
+        List<DomainExecutor> GetExecutorsForServicesViewByServiceName(string nameSubcategory);
         void BannedExecutor(string idExexutor);
         void UnBannedExecutor(string idExexutor);
         DomainExecutor GetExecutorByIdUser(string idUser);

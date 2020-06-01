@@ -9,8 +9,8 @@
 <script type="text/javascript">
     function ShowContacts(nameExec, telephone, email) {
         document.getElementById('modalNameExec').textContent = nameExec;
-        document.getElementById('modalTeleExec').textContent = 'Телефон: ' + telephone;
-        document.getElementById('modalEmailExec').textContent = 'Email: ' + email;
+        document.getElementById('modalTeleExec').textContent = telephone;
+        document.getElementById('modalEmailExec').textContent = email;
         $('#servicesModalCenter').modal('show');
     }
 
@@ -22,9 +22,70 @@
 
 
 <div class="container">
+    @if (Model.Count() > 1)
+    {
+        <div class="d-lg-none mt-5">
+            <div class="p-4 border-rounded border shadow-sm" id="filterBar">
+                <h4>ФИЛЬТРЫ</h4>
 
+                @using (Ajax.BeginForm("Services", "Global", new AjaxOptions { HttpMethod = "Get", UpdateTargetId = "ServResult", LoadingElementId = "loaderServices" }, new { @class = "form-horizontal", @role = "form", @method = "get" }))
+                {
+
+                    <div class="form-group mt-2">
+                        <label for="CityExec">Город исполнителя</label>
+                        <input type="text" class="form-control" id="CityExec" name="city" placeholder="Город">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="PriceOrder">Стоимость</label>
+                        <div class="input-group">
+                            <input type="text" pattern="\d+(,\d{2})?" class="form-control" name="price" id="PriceOrder" placeholder="До">
+                            <div class="input-group-append">
+                                <select class="custom-select alert-success" name="measure">
+                                    <option value="0" selected>Мера</option>
+                                    <option value="1">За услугу</option>
+                                    <option value="2">За единицу</option>
+                                    <option value="3">За час</option>
+                                    <option value="4">За кг</option>
+                                    <option value="5">За метр</option>
+                                    <option value="6">За км</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="PlaceServ">Место исполнения</label>
+                        <select class="custom-select" name="place">
+                            <option value="0" selected>Все</option>
+                            <option value="1">Удаленно</option>
+                            <option value="6">У меня</option>
+                            <option value="2">У исполнителя</option>
+                        </select>
+                    </div>
+
+                    if (!String.IsNullOrEmpty(ViewBag.SubcatName))
+                    {
+                        <input type="hidden" name="nameSubcategory" @*value="@ViewBag.SubcatName"*@ value="@Session["SubcatName"]" />
+                    }
+                    else
+                    {
+                        <input type="hidden" name="IdSubcategory" @*value="@ViewBag.SubcatId"*@ value="@Session["SubcatId"]" />
+                    }
+
+                    <div class="row d-flex d-inline align-items-center">
+                        <div class="col-7 mt-4">
+                            <input class="form-control btn bg-transparent border rounded-lg ml-0 mr-2" type="submit" id="SendFilter" value="Применить" />
+                        </div>
+                        <div class="col-5 mt-4 text-center">
+                            <a class="def-link-text text-decoration-none" href="@Url.Action("RemoveFilters", "Global")">Соброс <span aria-hidden="true">&times;</span></a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    }
     <div class="d-flex flex-row">
-        <div class="col-8 h-100">
+        <div class="col-12 col-lg-8 h-100">
             <div class="mt-5" id="loaderServices" style="display: none;">
                 <div class="d-flex justify-content-center">
                     <h2 class="text-muted font-weight-bold align-middle">Получение данных...</h2>
@@ -34,13 +95,10 @@
             <div id="ServResult">
                 @Html.Partial("_ServicesPartial", Model)
             </div>
-
-          
-
         </div>
         @if (Model.Count() > 1)
         {
-            <div class="col-4">
+            <div class="col-4 d-none d-lg-block">
                 <div class=" mt-5 ml-2 p-4 border-rounded border shadow-sm" id="filterBar">
                     <h4>ФИЛЬТРЫ</h4>
 
@@ -87,54 +145,58 @@
                             <input type="hidden" name="IdSubcategory" @*value="@ViewBag.SubcatId"*@ value="@Session["SubcatId"]" />
                         }
 
-                      <div class="d-flex d-inline align-items-center mt-4">
-                          <input class="form-control btn bg-transparent border rounded-lg w-50 ml-0" type="submit" id="SendFilter" value="Применить" style="font-size:1.2em" />
-                      
-                          <a class="my-auto ml-auto def-link-text text-decoration-none" href="@Url.Action("RemoveFilters","Global")">Собросить <span aria-hidden="true"><i class="fa fa-times text-muted" aria-hidden="true"></i></span></a>
-                      </div>
+                        <div class="row d-flex d-inline align-items-center">
+                            <div class="col-7 mt-4">
+                                <input class="form-control btn bg-transparent border rounded-lg ml-0 mr-2" type="submit" id="SendFilter" value="Применить"/>
+                            </div>
+                            <div class="col-5 mt-4">
+                                <a class="my-auto ml-auto def-link-text text-decoration-none" href="@Url.Action("RemoveFilters", "Global")">Соброс <span aria-hidden="true">&times;</span></a>
+                            </div>
+                        </div>
+
                     }
                 </div>
             </div>
 
-
-            <!-- Modal Contacts-->
-            <div class="modal fade " id="servicesModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered " role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="modalNameExec">Контакты исполнителя</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="d-flex flex-column align-content-center">
-                                <h3 class="mx-auto" id="modalTeleExec"></h3>
-                                <h3 class="mx-auto" id="modalEmailExec"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal ServiceDetails-->
-            <div class="modal fade " id="servicesDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered " role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="modalNameService">Подробнее об услуге</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body p-4" id="resultDetails">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         }
+        <!-- Modal Contacts-->
+        <div class="modal fade " id="servicesModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modalNameExec">Контакты исполнителя</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column align-content-center">
+                            <p class="mx-auto h4">Телефон:</p>
+                            <p class="mx-auto h4 text-muted" id="modalTeleExec"></p>
+                            <p class="mx-auto h4">Email:</p>
+                            <p class="mx-auto h4 text-muted" id="modalEmailExec"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal ServiceDetails-->
+        <div class="modal fade " id="servicesDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modalNameService">Подробнее об услуге</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-4" id="resultDetails">
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>

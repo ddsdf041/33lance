@@ -30,17 +30,14 @@
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-6">
                     <div class="card-body pt-0">
-                        <a href="@Url.Action("Executor", "Global", new { id = exec.ID_User })" class="card-title heading-link">@exec.Name</a>
+                        <a href="@Url.Action("Executor", "Global", new { id = exec.ID_User })" class="card-title heading-link"><h2>@exec.Name</h2></a>
                         <p class="text-muted">@exec.City</p>
                         <p>@exec.Description</p>
 
-                        <div class="accordion" id="accordionExample">
-
-                            <p class="mt-0">
+                        <div class="accordion" id="accordionExample">                     
                                 <a class="collapsed def-link-text pl-0" data-toggle="collapse" data-target="#collapseServ_@exec.ID_User" aria-expanded="false" aria-controls="collapseOne">
-                                    Услуги <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                </a>
-                            </p>
+                                    <h6>Услуги <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
+                                </a>             
 
                             <div id="collapseServ_@exec.ID_User" class="collapse" data-parent="#accordionExample">
 

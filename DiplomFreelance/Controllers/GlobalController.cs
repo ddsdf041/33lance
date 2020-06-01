@@ -95,7 +95,7 @@ namespace DiplomFreelance.Controllers
             }
             else
             {
-                executors = _serviceExecutor.GetExecutorsForServicesViewByNameSubcategory(nameService);
+                executors = _serviceExecutor.GetExecutorsForServicesViewByServiceName(nameService);
             }
             if (!String.IsNullOrEmpty(city))
             {

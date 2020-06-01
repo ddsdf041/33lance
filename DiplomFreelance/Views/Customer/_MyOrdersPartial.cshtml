@@ -25,7 +25,7 @@
                     @if (order.IsBanned == true)
                     {
 
-                        <p class="card-title heading-def">@order.Name</p>
+                        <p class="card-title heading-def h4">@order.Name</p>
                         <p>@order.Category  •  @order.Subcategory</p>
                         <div class="d-flex flex-row align-items-center">
                             <div class="col-3 p-0">
@@ -45,10 +45,10 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
 
-                        <p class="card-title heading-def">@order.Name</p>
+                        <p class="card-title heading-def h4">@order.Name</p>
                         <p>@order.Category  •  @order.Subcategory</p>
-                        <div class="d-flex flex-row align-items-center">
-                            <div class="col-3 p-0">
+                        <div class="row d-flex flex-row align-items-center">
+                            <div class="col-12 col-md-3">
                                 @switch (order.Status)
                                 {
                                     case "Опубликован":
@@ -202,7 +202,7 @@
                                         <hr />
                                         <p class="h4">Исполнитель</p>
                                         <div class="row border rounded-lg p-2 mr-1 ml-1 mt-3 mb-3">
-                                            <div class="col-2">
+                                            <div class="col-3">
                                                 <img src="@order.Executor.Photo" alt="" class="img-responsive rounded w-100" />
                                                 <p class="text-center h6"> <i class="fa fa-star" aria-hidden="true" style="color:#28a745"></i> @order.Executor.Raiting</p>
                                             </div>

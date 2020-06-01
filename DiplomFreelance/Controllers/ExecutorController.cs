@@ -67,7 +67,10 @@ namespace DiplomFreelance.Controllers
         public ActionResult OrderDetails(CreateResponseViewModel model)
         {
             CheckStatusExecutor();
-            model.Date = DateTime.Now;
+            TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
+            string moscowTime = (DateTime.UtcNow + moscowTimeZone.BaseUtcOffset).ToString("yyyy-MM-dd HH:mm");
+            model.Date = Convert.ToDateTime(moscowTime);
+
             if (!ModelState.IsValid)
             {
                 var order = new OrderDetailViewModel() { Order = _serviceOrder.GetOrderById(model.ID_Order).ConvertToOrderViewModel(), Response = model };

@@ -14,7 +14,7 @@ namespace DiplomFreelance.Models.Repository.Interfaces
         void UpdateExecutor(Executor item); // обновление объекта
         void DeleteExecutor(string id); // удаление объекта по id
         IEnumerable<Executor> GetExecutorsBySubId(int IdSubcategory);
-        IEnumerable<Executor> GetExecutorsBySubName(string nameSubcategory);
+        IEnumerable<Executor> GetExecutorsByServiceName(string nameSubcategory);
         Executor GetByUserId(string id_User);
         void BannedExecutor(string id);
         void UnBannedExecutor(string id);

@@ -29,9 +29,9 @@ namespace DiplomFreelance.Controllers.BusinessLogic
         {
             return GetExecutors(_executorRepository.GetExecutorsBySubId(idsubcategory).ToList());
         }
-        public List<DomainExecutor> GetExecutorsForServicesViewByNameSubcategory(string nameSubcategory)
+        public List<DomainExecutor> GetExecutorsForServicesViewByServiceName(string nameSubcategory)
         {
-            return GetExecutors(_executorRepository.GetExecutorsBySubName(nameSubcategory).ToList());
+            return GetExecutors(_executorRepository.GetExecutorsByServiceName(nameSubcategory).ToList());
             
         }
 

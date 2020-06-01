@@ -42,7 +42,8 @@ namespace DiplomFreelance.Models.Repository
             address.Value = address.Value ?? DBNull.Value;
             parameters[0] = address;
             string deadline = item.Deadline.ToString("yyyy-MM-dd");
-            string date = DateTime.Now.ToString("yyyy-MM-dd hh:mm");
+            TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
+            string moscowTime = (DateTime.UtcNow + moscowTimeZone.BaseUtcOffset).ToString("yyyy-MM-dd HH:mm");           
 
             _db.ExecuteNonQuery($@"INSERT INTO [Order](ID,Name,ID_Customer,ID_Status,ID_Executor,ID_Subcategory,Description,Deadline,ID_Measure,Budget,ID_Place,Address,Date,IsBanned) 
                                         VALUES(N'{item.ID}',
@@ -57,7 +58,7 @@ namespace DiplomFreelance.Models.Repository
                                                {item.Budget},
                                                {item.ID_Place},
                                                 @address,
-                                               N'{date}',
+                                               N'{moscowTime}',
                                                'false')", parameters);
             /*SELECT LAST_INSERT_ID();*/
 

@@ -47,7 +47,7 @@ namespace DiplomFreelance.Models.Repository
                               Executor.IsBanned", Mapper.MapExecutors);
 
         }
-        public IEnumerable<Executor> GetExecutorsBySubName(string nameSubcategory)
+        public IEnumerable<Executor> GetExecutorsByServiceName(string nameSubcategory)
         {
             return _db.ToList($@"Select 
                               Executor.ID_User,
@@ -63,7 +63,7 @@ namespace DiplomFreelance.Models.Repository
                               from Executor
                               join Service on(Service.ID_Executor = Executor.ID_User)
                               join Subcategory on(Subcategory.ID = Service.ID_Subcategory)
-                              where Subcategory.Name LIKE '%{nameSubcategory}%' 
+                              where Subcategory.Name LIKE N'%{nameSubcategory}%' or Subcategory.Name LIKE N'%сайт%'  
                               GROUP BY
                               Executor.ID_User,
                               Executor.Name,

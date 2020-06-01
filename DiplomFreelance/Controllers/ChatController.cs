@@ -99,7 +99,9 @@ namespace DiplomFreelance.Controllers
         {
 
             model.Sender = User.Identity.GetUserId();
-            model.Time_send = DateTime.Now;
+            TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
+            string moscowTime = (DateTime.UtcNow + moscowTimeZone.BaseUtcOffset).ToString("yyyy-MM-dd HH:mm");
+            model.Time_send = Convert.ToDateTime(moscowTime);
             _serviceMessage.CreateNewMessage(model);
             return RedirectToAction("MessageBoxPartial", new { idChat = model.ID_Chat });
 

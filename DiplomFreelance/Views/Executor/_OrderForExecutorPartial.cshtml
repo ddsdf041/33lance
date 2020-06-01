@@ -14,20 +14,20 @@
                     <div class="col">
                         <div class="card-body align-self-center">
                             <div class="row align-items-center ">
-                                <div class="col-8">
-                                    @Html.ActionLink(item.Name, "OrderDetails", new { order = item.ID }, new { @class = "h2 font-weight-bold", @style = "color: #04b;" })
+                                <div class="col-md-8 col-12">
+                                    @Html.ActionLink(item.Name, "OrderDetails", new { order = item.ID }, new { @class = "h4 font-weight-bold", @style = "color: #04b;" })
 
                                 </div>
-                                <div class="col-4 ">
-                                    <p class="h4 font-weight-bold float-right">до @item.Budget <i class="fa fa-rub" aria-hidden="true"></i></p>
+                                <div class="col-md-4 col-12">
+                                    <p class="h4 font-weight-bold float-md-right">до @item.Budget <i class="fa fa-rub" aria-hidden="true"></i></p>
                                 </div>
                             </div>
                             <div class="row align-items-center ">
-                                <div class="col-8">
+                                <div class="col-md-8 col-12">
                                     <p>@item.Category • @item.Subcategory</p>
                                 </div>
-                                <div class="col-4 ">
-                                    <p class="text-muted float-right">@item.Measure</p>
+                                <div class="col-md-4 col-12">
+                                    <p class="text-muted float-md-right">@item.Measure</p>
                                 </div>
                                 <div class="col-8">
                                     <p class="text-muted">Опубликовано @item.Date.ToShortDateString() в @item.Date.ToShortTimeString()</p>

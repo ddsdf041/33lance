@@ -117,7 +117,7 @@ function previewImages() {
         $(reader).on("load", function () {
 
             $preview.append($('<div>', {
-                class:'col-4'
+                class:'col-6 col-md-4'
             })
                 .append($('<img/>', {
                     class:'img-responsive rounded w-100',
