@@ -339,7 +339,57 @@ overflow-y: auto;
     border-radius: 1em;
 }
 
-/*-------------------------------*/
+/*----------------SupportFrom---------------*/
+
+
+.contact-input {
+    color: black;
+    background-color: transparent;
+    font-size: 18px;
+    padding: 1rem;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #33383B;
+}
+
+textarea.contact-input {
+    color: black;
+    background-color: transparent;
+    height: 100px;
+    resize: none;
+    font-size: 18px;
+    padding: 1rem;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #33383B;
+}
+
+input.contact-input:active, input.contact-input:focus {
+    outline: none;
+}
+
+input.contact-input::-moz-focus-inner {
+    border: 0;
+}
+
+textarea.contact-input:active, textarea.contact-input:focus {
+    outline: none;
+}
+
+textarea.contact-input::-moz-focus-inner {
+    border: 0;
+}
+
+input.contact-input-bttn:active, input.contact-input-bttn:focus {
+    outline: none;
+}
+
+input.contact-input-bttn::-moz-focus-inner {
+    border: 0;
+    padding: 2rem;
+}
+
+/*------------------------------------------*/
 
 
 @media (max-width: 575.98px) {

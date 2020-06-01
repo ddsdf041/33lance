@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
@@ -197,6 +199,33 @@ namespace DiplomFreelance.Controllers
         {
 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Support(SupportViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                string message = "Email - " + model.Email
+                    + "<br>Имя - " + model.Name                
+                      + "<br>Телефон - " + model.Phone
+                       + "<br>Сообщение - " + model.Message;
+                MailAddress from = new MailAddress("33lance@mail.ru", "Сообщение от сайта");
+                MailAddress to = new MailAddress("33lance@mail.ru");
+                MailMessage m = new MailMessage(from, to);
+                m.Subject = model.Theme;
+                m.Body = message;
+                m.IsBodyHtml = true;
+                // адрес smtp-сервера и порт, с которого отправляется письмо
+                SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25);
+                smtp.Credentials = new NetworkCredential("33lance@mail.ru", "frq-TsT-j8x-TZ4");
+                smtp.EnableSsl = true;
+                smtp.Send(m);
+
+                return RedirectToAction("Catalog", "Global", new { message = "Ваше сообщение отправлено в поддержку!"});
+            }
+            return View(model);
+
         }
 
         public ActionResult Executor(string id)

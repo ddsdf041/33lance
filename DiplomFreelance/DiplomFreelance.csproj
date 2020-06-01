@@ -404,6 +404,7 @@
     <Compile Include="Models\FreelanceModels\ViewModel\MessageViewModel.cs" />
     <Compile Include="Models\FreelanceModels\ViewModel\OfferViewModel.cs" />
     <Compile Include="Models\FreelanceModels\ViewModel\OrderForExecutorViewModel.cs" />
+    <Compile Include="Models\FreelanceModels\ViewModel\SupportViewModel.cs" />
     <Compile Include="Models\Repository\ChatRepository.cs" />
     <Compile Include="Models\Repository\Interfaces\IChatRepository.cs" />
     <Compile Include="Models\Repository\Interfaces\IMessageRepository.cs" />

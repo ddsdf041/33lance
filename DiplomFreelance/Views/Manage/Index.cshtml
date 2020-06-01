@@ -1,9 +1,7 @@
 ﻿@model DiplomFreelance.Models.IndexViewModel
-@{
-    ViewBag.Title = "Управление";
-}
 
-<h2>@ViewBag.Title.</h2>
+
+<p class="h2 mt-5">Учетная запись</p>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
@@ -13,21 +11,14 @@
         <dt>Пароль:</dt>
         <dd>
             [
-            @if (Model.HasPassword)
-            {
-                @Html.ActionLink("Смена пароля", "ChangePassword")
-            }
-            else
-            {
-                @Html.ActionLink("Создать", "SetPassword")
-            }
+                @Html.ActionLink("Смена пароля", "ChangePassword") 
             ]
         </dd>
-        <dt>Внешние имена входа:</dt>
+        @*<dt>Внешние имена входа:</dt>
         <dd>
             @Model.Logins.Count [
             @Html.ActionLink("Управление", "ManageLogins") ]
-        </dd>
+        </dd>*@
         @*
             Номера телефонов можно использовать в качестве второго проверочного фактора для системы двухфакторной проверки подлинности.
              
@@ -56,13 +47,13 @@
                 }
             </dd>
         *@
-        <dt>Двухфакторная проверка подлинности:</dt>
+        @*<dt>Двухфакторная проверка подлинности:</dt>
         <dd>
             <p>
                 Поставщики двухфакторной проверки подлинности не настроены. В <a href="https://go.microsoft.com/fwlink/?LinkId=403804">этой статье</a>
                 можно узнать, как настроить двухфакторную проверку подлинности для этого приложения ASP.NET.
             </p>
-            @*@if (Model.TwoFactor)
+            @if (Model.TwoFactor)
                 {
                     using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                     {
@@ -81,7 +72,7 @@
                         <input type="submit" value="Включить" class="btn btn-link" />
                         </text>
                     }
-                }*@
-        </dd>
+                }
+        </dd>*@
     </dl>
 </div>
