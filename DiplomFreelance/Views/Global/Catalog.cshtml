@@ -6,7 +6,7 @@
 
     <div class="card row ">
         <img src="https://www.ardentia.es/images/headers/bg_blog.jpg" class="card-img h-100" id="catalog-header-img">
-        <div class="card-img-overlay d-flex flex-column align-items-center pt-0">
+        <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center pt-0">
             @if (!String.IsNullOrEmpty(ViewBag.Message))
             {
                 <div class="alert alert-info w-100 mb-0" role="alert" id="notification">
@@ -16,7 +16,8 @@
                     </button>
                 </div>
             }
-            <div class="my-auto col-xl-4 col-lg-6 col-md-10 col-10 d-flex flex-column align-items-center">
+        <div class="col-xl-4 col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center p-0">
+            <div class="d-flex flex-column w-100 mt-auto mt-md-0">
                 <h1 class="card-title text-center" id="catalog-header">Найти услугу</h1>
                 @using (Html.BeginForm("Services", "Global", FormMethod.Get, new { @class = "form-inline w-100 mt-2", role = "form" }))
                 {
@@ -27,7 +28,15 @@
                         </div>
                     </div>
                 }
+
             </div>
+            <div class="scroll-downs mt-auto d-md-none">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+            </div>
+        </div>
+            
         </div>
     </div>
 
@@ -35,7 +44,7 @@
     <h2 class="mt-5">Каталог услуг</h2>
     <div class="row mt-4">
         <div class="col-lg-3 col-md-4 col-6">
-            <ul class="pl-4" style="list-style-type: none;">
+            <ul class="pl-0 pl-md-4" style="list-style-type: none;">
                 @foreach (var itemCategory in Model)
                 {
                     <li class="mb-3">

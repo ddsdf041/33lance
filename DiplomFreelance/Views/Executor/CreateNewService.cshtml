@@ -5,7 +5,7 @@
 
 <div class="container">
 <div class="row  ">
-    <div class="col-lg-6 col-md-9 col-sm-12 border-rounded shadow rounded-lg p-4 mt-5 mr-2">
+    <div class="col-lg-6 col-md-9 col-sm-12 border-rounded shadow p-4 mt-5 mr-2">
         @using (Html.BeginForm("CreateNewService", "Executor", FormMethod.Post, new { @class = "w-100", id = "UpdateForm" }))
         {
             @Html.AntiForgeryToken()
@@ -52,7 +52,7 @@
                 <div class="form-group mt-2">
                     <label for="PriceOrder">Стоимость</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="Price" id="PriceOrder" value="" placeholder="Цена, за которую вы выполняете услугу" required>
+                        <input type="text" class="form-control" name="Price" id="PriceOrder" value="" pattern = "\d+(,\d{2})?" placeholder="Цена, за которую вы выполняете услугу" required>
                         <div class="input-group-append">
 
                             <select class="custom-select alert-success" name="ID_Measure" id="measure">
@@ -79,7 +79,7 @@
                     <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
                         <input type="radio" name="ID_Place" value="6" onchange="selectPlace()" id="option4" autocomplete="off"> У заказчика
                     </label>
-                    <label class="col-auto btn bttn-radio rounded-pill mt-2 active">
+                    <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2 active">
                         <input type="radio" name="ID_Place" value="3" onchange="selectPlace()" id="option1" autocomplete="off" checked> Указать место
                     </label>
                 </div>
@@ -94,16 +94,16 @@
 
                 <div class="form-inline mt-2">
                     <label for="SubcategoryOrder" id="nameSubcategory" class="control-label">Пожалуйста выберите категорию</label>
-                    <a class="form-control rounded-pill ml-auto" id="SubcategoryOrder" data-toggle="modal" data-target="#exampleModalCenter">Категория</a>
+                    <a class="form-control rounded-pill ml-auto w-auto float-left float-md-none" id="SubcategoryOrder" data-toggle="modal" data-target="#subcategoryOrderModalCenter">Категория</a>
                     <input type="hidden" id="selectedSubcategory" name="ID_Subcategory" />
                 </div>
                 <hr />
                 <div class="form-group">
-                    <input class="form-control rounded-pill btn-outline-success w-50 mx-auto" type="submit" id="SendOrder" value="Создать услугу"  />
+                    <input class="form-control rounded-pill btn-outline-success w-auto mx-auto" type="submit" id="SendOrder" value="Создать услугу"  />
                 </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade bd-example-modal-lg" id="subcategoryOrderModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content" style="overflow-y: scroll">
                         <div class="modal-header">

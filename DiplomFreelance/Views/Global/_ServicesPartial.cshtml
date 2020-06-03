@@ -29,7 +29,7 @@
                     <p class="font-weight-bold text-center mt-2"> <i class="fa fa-star fa-spin success" aria-hidden="true" style="color:#28a745"></i>  @exec.Raiting</p>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-6">
-                    <div class="card-body pt-0">
+                    <div class="card-body p-0 p-md-2">
                         <a href="@Url.Action("Executor", "Global", new { id = exec.ID_User })" class="card-title heading-link"><h2>@exec.Name</h2></a>
                         <p class="text-muted">@exec.City</p>
                         <p>@exec.Description</p>
@@ -43,15 +43,15 @@
 
                                 @foreach (var service in exec.Services)
                                 {
-                                    <div class="row">
-                                        <div class="col-8">
+                                    <div class="row justify-content-between">
+                                        <div class="col service_name">
 
                                             @Ajax.ActionLink(service.Name, "_ServiceDetailsPartial", "Global",
                                              new { idservice = service.ID },
                                              new AjaxOptions { UpdateTargetId = "resultDetails", OnComplete = "ShowDetails()" }, htmlAttributes: new { @class = "p" })
 
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-auto pl-0">
                                             <p class="float-right">@service.Price <i class="fa fa-rub" aria-hidden="true"></i></p>
                                         </div>
                                     </div>

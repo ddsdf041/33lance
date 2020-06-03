@@ -3,10 +3,22 @@
 
 @Scripts.Render("~/scripts/executorScripts.js")
 
-<div class="container">
-    <div class="col-lg-6 col-md-9 col-sm-12 border shadow rounded-lg p-4 mt-5 mr-2">
-        <div class="row">
+    <script type="text/javascript">
+    var loadFile = function (event) {
+        var reader = new FileReader();
 
+        reader.onload = function () {
+            var output = document.getElementById('output');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+    </script>
+
+<div class="container">
+   
+    <div class="row">
+        <div class="col-lg-6 col-md-9 col-sm-12 border shadow border-rounded p-4 mt-5 mr-2">
             @using (Html.BeginForm("ChangeExecutorProfile", "Manage", FormMethod.Post, new { @class = "w-100", role = "form", enctype = "multipart/form-data" }))
             {
                 @Html.AntiForgeryToken()
@@ -17,11 +29,25 @@
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     @Html.HiddenFor(model => model.ID_User)
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Photo, "Фото профиля", htmlAttributes: new { @class = "control-label col-md-2" })
-                        <label for="Pic" class="btn-link"><i class="fa fa-clipboard mr-2 m-2" aria-hidden="true"></i> Добавить изображение</label>
-                        <input type="file" id="Pic" class="col-md-10" name="PhotoFile" style="display:none" value="Добавить новое фотографию"/>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Photo, "Фото профиля", htmlAttributes: new { @class = "control-label col" })
+                    <div class="row">
+                        <div class="col-4">
+                            @if (Model.Photo != null)
+                            {
+                                <img src="@Model.Photo" class="w-100" id="output" />
+                            }
+                            else
+                            {
+                                <img class="w-100" id="output" />
+                            }
+
+                        </div>
+
                     </div>
+                    <label for="Pic" class="btn-link"><i class="fa fa-clipboard mr-2 m-2" aria-hidden="true"></i> Обновить фото</label>
+                    <input type="file" id="Pic" class="col-md-10" name="PhotoFile" style="display:none" value="Добавить новое фотографию" onchange="loadFile(event)" />
+                </div>
 
                     @*<img class="m-3" height="200" id="output" src="@Model.Photo" />*@
                     <div class="form-inline d-flex flex-row mt-2" id="pics">

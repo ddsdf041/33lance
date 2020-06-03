@@ -5,10 +5,9 @@
 }
 
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-8">
-                <section id="loginForm">
-                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal col-lg-8 col-md-10 col-sm-12", role = "form" }))
+        <div class="row mt-5">       
+                <section id="loginForm" class="col-lg-6 col-md-10 col-12">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal ", role = "form" }))
                     {
                         @Html.AntiForgeryToken()
                         <h4>Авторизация в системе</h4>
@@ -49,9 +48,7 @@
                             @Html.ActionLink("Забыли пароль?", "ForgotPassword")
                         </p>*@
                     }
-                </section>
-            </div>
-      
+                </section>      
         </div>
     </div>
 

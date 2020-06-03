@@ -29,7 +29,7 @@
             </a>
 
             <div id="collapseOrder4Exec" class="collapse" data-parent="#accordionOrder4Exec">
-                <div class="col-12 pl-4">
+                <div class="col-12 p-0">
                     @foreach (var item in Model.Categories)
                     {
                         <h4 class="text-dark">@item.Name</h4>
@@ -54,7 +54,7 @@
                         <div class="spinner-grow text-secondary ml-3 align-middle" role="status" aria-hidden="true"></div>
                     </div>
                 </div>
-                <div class="d-flex flex-column" id="OrdersResult">
+                <div class="d-flex flex-column p-0" id="OrdersResult">
                     @Html.Partial("_OrderForExecutorPartial", Model.Orders)
                 </div>
             </div>
