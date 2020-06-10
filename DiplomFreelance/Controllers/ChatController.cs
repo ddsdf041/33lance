@@ -27,6 +27,8 @@ namespace DiplomFreelance.Controllers
             _serviceMessage = serviceMessage;
 
         }
+
+        //Выводит на страницу чаты авторизированного пользователя
         public ActionResult ChatPartial(string iduser)
         {
             if (!String.IsNullOrEmpty(iduser))
@@ -65,6 +67,7 @@ namespace DiplomFreelance.Controllers
 
         }
 
+        //выводи диалоги к выбранному чату
         public ActionResult DialogPartial(int? idChat)
         {
             if (idChat != null)
@@ -82,7 +85,8 @@ namespace DiplomFreelance.Controllers
                 return PartialView("_DialogPartial", null);
             }
         }
-       
+
+       //выводит сообщения к определенному чату
         public ActionResult MessageBoxPartial(int? idChat)
         {
                 List<MessageViewModel> mvm = _serviceMessage.GetMessagesByChatId((int)idChat).ConvertToMessageViewModel();
@@ -94,6 +98,7 @@ namespace DiplomFreelance.Controllers
                 return PartialView("_MessageBoxPartial", msg);
         }
 
+        //служит для отправки сообщения
         [HttpPost]
         public ActionResult SendMessage(CreateMessageViewModel model)
         {

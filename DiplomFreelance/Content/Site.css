@@ -465,11 +465,14 @@ input.contact-input-bttn::-moz-focus-inner {
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
     #catalog-header-img {
-        height: calc(100vh - 86px) !important;
+        height: calc(100vh - 126px) !important;
         background-size: cover;
         object-fit: cover;
         -webkit-filter: brightness(80%);
         filter: brightness(80%);
+    }
+    .service_name a {
+        white-space: normal;
     }
 }
 

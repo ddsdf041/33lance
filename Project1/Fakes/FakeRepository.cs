@@ -161,6 +161,11 @@ namespace ProjectForTests.Fakes
             throw new NotImplementedException();
         }
 
+        public List<DomainOrder> GetOrdersBySubcategoryId(int idSubcategory)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<DomainOrder> GetOrdersOfferedToTheExecutorAndStatusIsPending(string idExecutor)
         {
             throw new NotImplementedException();
@@ -297,6 +302,11 @@ namespace ProjectForTests.Fakes
             throw new NotImplementedException();
         }
 
+        public List<DomainExecutor> GetExecutorsForServicesViewByServiceName(string nameSubcategory)
+        {
+            throw new NotImplementedException();
+        }
+
         public void UnBannedExecutor(string idExexutor)
         {
             throw new NotImplementedException();
@@ -345,7 +355,22 @@ namespace ProjectForTests.Fakes
             throw new NotImplementedException();
         }
 
+        public void CreateCustomer(CustomerViewModel customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteCustomer(string idCustomer)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<DomainCustomer> GetAllCustomer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public DomainCustomer GetCustomerByEmail(string email)
         {
             throw new NotImplementedException();
         }
@@ -404,6 +429,11 @@ namespace ProjectForTests.Fakes
         }
 
         public Order GetOrderById(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Order> GetOrderBySubcategoryId(int idSubcategory)
         {
             throw new NotImplementedException();
         }

@@ -4464,7 +4464,6 @@ C:\Users\yourh\OneDrive\Рабочий стол\рапка1\DiplomFreelance\bin\
 C:\Users\yourh\OneDrive\Рабочий стол\рапка1\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\yourh\OneDrive\Рабочий стол\рапка1\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Users\yourh\OneDrive\Рабочий стол\рапка1\DiplomFreelance\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\yourh\OneDrive\Рабочий стол\рапка1\DiplomFreelance\obj\Debug\DiplomFreelance.csprojAssemblyReference.cache
 C:\Users\yourh\OneDrive\Рабочий стол\рапка1\DiplomFreelance\obj\Debug\DiplomFreelance.csproj.CoreCompileInputs.cache
 C:\Users\yourh\OneDrive\Рабочий стол\рапка1\DiplomFreelance\obj\Debug\DiplomFreelance.csproj.CopyComplete
 C:\Users\yourh\OneDrive\Рабочий стол\рапка1\DiplomFreelance\obj\Debug\DiplomFreelance.dll

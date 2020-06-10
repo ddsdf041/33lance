@@ -36,31 +36,58 @@ function SelectSubcategory(idSubcategory, nameSubcategory) {
     $('#subcategoryOrderModalCenter').modal('hide');
 }
 
+
 function deleteOrder(idOrder) {
     if (confirm("Удалить заказ?")) {
+        $('#processModal').modal('show');
         $.ajax({
             url: '/Customer/DeleteOrder',
             data: { 'idOrder': idOrder },
             cache: false,
             success: function (html) {
+                var activeRad = $('input[name="SelectStatusOrder"]:checked');
+                var firstRad = $('input[name=SelectStatusOrder]:first');
+
+                firstRad.attr('checked', true);
+                firstRad.parent('label').addClass("active");
+                activeRad.removeAttr('checked');
+                activeRad.parent('label').removeClass("active");
+               
+                $('#processModal').modal('hide');
                 $("#resultMyOrders").html(html);
-                //$("input:radio[name=SelectStatusOrder][disabled=false]:first");
-                
+              
             }
+        }).done(function (res) {
+            $('#processModal').modal('hide');
+        }).fail(function (res) {
+            $('#processModal').modal('hide');
         });
     }
 }
 
 function completeOrder(idOrder) {
     if (confirm("Завершить заказ?")) {
+        $('#processModal').modal('show');
         $.ajax({
             url: '/Customer/CompleteOrder',
             data: { 'idOrder': idOrder },
             cache: false,
             success: function (html) {           
+                var activeRad = $('input[name="SelectStatusOrder"]:checked');
+                var firstRad = $('input[name=SelectStatusOrder]:first');
+
+                firstRad.attr('checked', true);
+                firstRad.parent('label').addClass("active");
+                activeRad.removeAttr('checked');
+                activeRad.parent('label').removeClass("active");
+
+                $('#processModal').modal('hide');
                 $("#resultMyOrders").html(html);
-              
             }
+        }).done(function (res) {
+            $('#processModal').modal('hide');
+        }).fail(function (res) {
+            $('#processModal').modal('hide');
         });
     }
 }
@@ -117,7 +144,7 @@ function previewImages() {
         $(reader).on("load", function () {
 
             $preview.append($('<div>', {
-                class:'col-4'
+                class:'col-6 col-md-4'
             })
                 .append($('<img/>', {
                     class:'img-responsive rounded w-100',
@@ -138,7 +165,7 @@ $('#Pic').on("change", previewImages);
 function selectStatus() {
     showLoaderOrder();
     var status_Id = $('input[name=SelectStatusOrder]:checked').val();
-    console.log(status_Id);
+ 
     $.ajax({
         url: '/Customer/MyOrders',
         data: { 'idStatus': status_Id },

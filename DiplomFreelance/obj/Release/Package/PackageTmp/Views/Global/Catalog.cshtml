@@ -4,20 +4,25 @@
     ViewBag.Title = "Catalog";
 }
 
-    <div class="card row ">
-        <img src="https://www.ardentia.es/images/headers/bg_blog.jpg" class="card-img h-100">
-        <div class="card-img-overlay d-flex flex-column align-items-center pt-0">
-            @if (!String.IsNullOrEmpty(ViewBag.Message))
-            {
-                <div class="alert alert-info w-100 mb-0" role="alert" id="notification">
-                    @ViewBag.Message
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            }
-            <div class="my-auto col-xl-4 col-lg-6 col-md-10 col-10 d-flex flex-column align-items-center">
-                <p class="card-title text-center" id="catalog-header">Найти услугу</p>
+@if (!String.IsNullOrEmpty(ViewBag.Message))
+{
+    <div class="row">
+        <div class="alert alert-info w-100 mb-0 rounded-0" role="alert" id="notification">
+            @ViewBag.Message
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+   
+}
+<div class="card row">
+    <img src="https://www.ardentia.es/images/headers/bg_blog.jpg" class="card-img h-100 rounded-0" id="catalog-header-img">
+    <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center pt-0">
+
+        <div class="col-xl-4 col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center p-0">
+            <div class="d-flex flex-column w-100 mt-auto mt-md-0">
+                <h1 class="card-title text-center" id="catalog-header">Найти услугу</h1>
                 @using (Html.BeginForm("Services", "Global", FormMethod.Get, new { @class = "form-inline w-100 mt-2", role = "form" }))
                 {
                     <div class="input-group w-100">
@@ -27,28 +32,34 @@
                         </div>
                     </div>
                 }
+
+            </div>
+            <div class="scroll-downs mt-auto d-md-none">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
             </div>
         </div>
+
     </div>
+</div>
 
 <div class="container">
     <h2 class="mt-5">Каталог услуг</h2>
-    <div class="d-flex flex-row mt-4">
-        <div class="col-md-4 col-sm-4">
-            <ul class="pl-4" style="list-style-type: none; font-size:1.2em">
+    <div class="row mt-4">
+        <div class="col-lg-3 col-md-4 col-6">
+            <ul class="pl-0 pl-md-4" style="list-style-type: none;">
                 @foreach (var itemCategory in Model)
                 {
                     <li class="mb-3">
-
                         @Ajax.ActionLink(itemCategory.Name, "Catalog", "Global", new { idCategory = itemCategory.ID }, new AjaxOptions { UpdateTargetId = "resultSubcategorys" })
-                        @*<a class="font-weight-bold" href="" style="font-size:18px">@itemCategory.Name</a>*@
                     </li>
                 }
             </ul>
         </div>
-        <div class="col-md-8 col-sm-8">
+        <div class="col-lg-9 col-md-8 col-6">
             <div id="resultSubcategorys">
-                <div class="jumbotron bg-white border border-rounded shadow">
+                <div class="jumbotron bg-white border border-rounded shadow d-none d-md-block">
                     <h2>Регистрируйся!</h2>
                     <p class="lead">Для получения возможности публикации своих собственных заказов или заданий, а так же для получения возможности самому стать исполнителем!</p>
                     <hr class="my-4">
@@ -60,6 +71,17 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="jumbotron bg-white border border-rounded shadow d-md-none mt-5">
+            <h2>Регистрируйся!</h2>
+            <p class="lead">Для получения возможности публикации своих собственных заказов или заданий, а так же для получения возможности самому стать исполнителем!</p>
+            <hr class="my-4">
+            <p>Если вы еще не зарегистрированны на сайте, то нажмите на кнопку для заполнения формы.</p>
+            <p class="lead">
+                <a class="bttn btn btn-lg rounded-pill text-success font-weight-bold" href="@Url.Action("Register","Account")" role="button">
+                    Регистрация <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </p>
         </div>
     </div>
 

@@ -33,7 +33,7 @@
         </button>
 
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse " id="navbarNavDropdown">
 
             <ul class="navbar-nav mr-auto font-weight-bold" id="nav-items">
                 @if (User.IsInRole("Executor"))
@@ -123,11 +123,11 @@
             <h3>Free<span>lance</span></h3>
 
             <p class="footer-links text-dark">
-                <a href="#">Каталог</a>
+                <a href="@Url.Action("Catalog","Global")">Каталог</a>
                 ·
-                <a href="#">Поддержка</a>
+                <a href="@Url.Action("Support","Global")">Поддержка</a>
                 ·
-                <a href="#">Чат</a>
+                <a href="#" data-toggle="modal" data-target="#chatModalCenter">Чат</a>
             </p>
 
             <p class="footer-company-name text-dark">33lance © 2020</p>
@@ -137,7 +137,7 @@
 
             <div>
                 <i class="fa fa-map-marker"></i>
-                <p><span>55 Улица Пионерская</span> Коломна, Россия</p>
+                <p><span>5 Улица Пионерская</span> Коломна, Россия</p>
             </div>
 
             <div>
@@ -156,14 +156,14 @@
 
             <p class="footer-company-about">
                 <span>О нас</span>
-                Наша площадка была разработана в качестве дипломного проекта, целью которого является разработка абсолютно бесплатной среды фриланса. Тыкай, наслаждайся!
+                Наша площадка была разработана в качестве дипломного проекта, целью которого является разработка абсолютно бесплатной среды фриланса. Тыкай, публикуй, исполняй!
             </p>
 
             <div class="footer-icons">
 
-                <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>      
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="https://vk.com/hat33"><i class="fa fa-vk" aria-hidden="true"></i></a>      
+                <a href="https://www.instagram.com/ddsdf041/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://github.com/ddsdf041/-"><i class="fa fa-github"></i></a>
 
             </div>
 

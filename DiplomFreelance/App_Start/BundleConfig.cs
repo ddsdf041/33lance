@@ -9,7 +9,7 @@ namespace DiplomFreelance
         public static void RegisterBundles(BundleCollection bundles)
         {
 
-            //ВСЕГДА СМОТРИ НА СВОЮ ВЕРСИЮ, ДЕБИЛ
+            //ВСЕГДА СМОТРИ НА СВОЮ ВЕРСИЮ
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
  "~/Scripts/jquery-3.3.1.js",

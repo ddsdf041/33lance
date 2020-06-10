@@ -5,10 +5,10 @@
         <ul class="pl-4" style="list-style-type: none; font-size:1rem">
             @foreach (var itemCategory in Model)
             {
-                <li class="mb-3">
-                    @Ajax.ActionLink(itemCategory.Name, "_OrderCategoryPartial", "Customer", new { idCategory = itemCategory.ID },
-                   new AjaxOptions { UpdateTargetId = "resultSubcategorysModal" })
-                </li>
+            <li class="mb-3">
+                @Ajax.ActionLink(itemCategory.Name, "_ServiceCategoryPartial", "Executor", new { idCategory = itemCategory.ID },
+                new AjaxOptions { UpdateTargetId = "resultSubcategorysModal" })
+            </li>
             }
         </ul>
     </div>

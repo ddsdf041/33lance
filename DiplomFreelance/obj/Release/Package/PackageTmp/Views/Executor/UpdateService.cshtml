@@ -68,19 +68,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-group btn-group-toggle mt-2 w-100" data-toggle="buttons">
-                            <label class="col-4 btn bttn-radio rounded-pill mr-2">
+                        <div class="row btn-group btn-group-toggle pl-3 pr-3" data-toggle="buttons">
+                            <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
                                 <input type="radio" name="ID_Place" value="1" onchange="selectPlace()" id="option3" autocomplete="off"> Удаленно
                             </label>
 
-                            <label class="col-4 btn bttn-radio rounded-pill mr-2">
+                            <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
                                 <input type="radio" name="ID_Place" value="2" onchange="selectPlace()" id="option2" autocomplete="off"> У меня
                             </label>
 
-                            <label class="col-4 btn bttn-radio rounded-pill mr-2">
+                            <label class="col-auto btn bttn-radio rounded-pill mr-2 mt-2">
                                 <input type="radio" name="ID_Place" value="6" onchange="selectPlace()" id="option4" autocomplete="off"> У заказчика
                             </label>
-                            <label class="col-4 btn bttn-radio rounded-pill">
+                            <label class="col-auto btn bttn-radio rounded-pill mt-2">
                                 <input type="radio" name="ID_Place" value="3" onchange="selectPlace()" id="option1" autocomplete="off"> Указать место
                             </label>
                         </div>
@@ -89,7 +89,7 @@
                         <div id="place">
                             <div class="form-group mt-2">
                                 <label for="AddressOrder">Адрес</label>
-                                <input type="text" class="form-control" name="Address" id="AddressOrder" placeholder="Город, улица, дом" required>
+                                <input type="text" class="form-control" name="Address" value="@Model.Address" id="AddressOrder" placeholder="Город, улица, дом" required>
                             </div>
                         </div>
 
@@ -101,7 +101,7 @@
                         </div>
                         <hr />
                         <div class="form-group">
-                            <input class="form-control rounded-pill btn-outline-success w-50 mx-auto" type="submit" id="SendOrder" value="Изменить услугу" style="font-size:1.2em" />
+                            <input class="form-control rounded-pill btn-outline-success w-50 mx-auto" type="submit" id="SendOrder" value="Изменить услугу" />
                         </div>
                     </div>
                     <!-- Modal -->
@@ -116,7 +116,7 @@
                                     </button>
                                 </div>
 
-                                <div class="modal-body">
+                                <div class="modal-body" style="height: 35vh; max-height: 35vh">
                                     @Html.Partial("_ServiceCategoryPartial", Model.categoryViewModels)
                                 </div>
                             </div>

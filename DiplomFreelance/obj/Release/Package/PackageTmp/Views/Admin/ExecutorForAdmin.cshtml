@@ -41,14 +41,14 @@
                                 <p class="font-weight-bold text-center"> <i class="fa fa-star fa-spin success" aria-hidden="true" style="color:#28a745"></i>  @exec.Raiting</p>
                             </div>
                             <div class="col-xl-10">
-                                @if (exec.IsBanned)
+                                @*@if (exec.IsBanned)
                                 {
                                     <p class="btn btn-outline-danger mr-1" title="Статус: заблокировано"><i class="fa fa-ban" aria-hidden="true"></i></p>
                                 }
                                 else
                                 {
                                     <p class="btn btn-outline-success mr-1" title="Статус: НЕ заблокировано"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
-                                }
+                                }*@
                                 <a href="@Url.Action("Executor", "Global", new { id = exec.ID_User })" class="card-title h4 font-weight-bold" style="color: #04b;">@exec.Name</a>
                                 <p class="text-muted">@exec.City</p>
                                 <p>@exec.Description</p>

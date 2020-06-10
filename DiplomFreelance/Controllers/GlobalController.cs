@@ -35,7 +35,7 @@ namespace DiplomFreelance.Controllers
             _serviceService = serviceService;
         }
 
-
+        //Метод контроллера, управляющий открытием страницы, возвращает на страницу каталог категории и подкатегории
         public ActionResult Catalog(int? idCategory, string message)
         {
             var list = _serviceCategory.GetCategories();
@@ -54,22 +54,7 @@ namespace DiplomFreelance.Controllers
 
         }
 
-        //[HttpGet]
-        //public ActionResult Services(int IdSubcategory, int? page = 1)
-        //{
-        //    var executors = _serviceExecutor.GetExecutorsByIdSubcategory(IdSubcategory).Where(x => x.IsBanned == false).ToList();
-        //    var executorsViewModel = executors.ConvertToExecutorViewModel().OrderByDescending(x => x.Raiting);
-        //    //foreach (var item in executors)
-        //    //{
-        //    //    executorsViewModel.Add(ExecutorConvertor.ConvertToExecutorViewModel(item));
-        //    //}
-        //    ViewBag.SubcatId = IdSubcategory;
-        //    int pageSize = 2;
-        //    int pageNumber = (page ?? 1);
-
-        //    return View(executorsViewModel.ToPagedList(pageNumber, pageSize));
-        //}
-
+        //метод, удалающий фильтры, сохраненные в сессии
         public ActionResult RemoveFilters()
         {
             Session["city"] = null;
@@ -80,6 +65,7 @@ namespace DiplomFreelance.Controllers
             return RedirectToAction("Services", "Global", new { nameService = Session["SubcatName"], IdSubcategory = Session["SubcatId"] });
         }
 
+        //Метод, управляющий отображением страницы услуг, выводит на нее исполнителей, также фильтрует их по входящим параметрам
         [HttpGet]
         public ActionResult Services(string nameService, int? IdSubcategory, string city, decimal? price, int? place, int? measure, int? page = 1)
         {
@@ -127,80 +113,22 @@ namespace DiplomFreelance.Controllers
               ? (ActionResult)PartialView("_ServicesPartial", executors.Where(x => x.IsBanned == false).ToList().ConvertToExecutorViewModel().OrderByDescending(x => x.Raiting).ToPagedList(pageNumber, pageSize))
               : View(executors.Where(x => x.IsBanned == false).ToList().ConvertToExecutorViewModel().OrderByDescending(x => x.Raiting).ToPagedList(pageNumber, pageSize));
         }
-
-        //[HttpGet]
-        //public ActionResult Services(int IdSubcategory, int? page = 1)
-        //{
-        //    var executors = _serviceExecutor.GetExecutorsByIdSubcategory(IdSubcategory).Where(x=>x.IsBanned == false).ToList();
-        //    var executorsViewModel = executors.ConvertToExecutorViewModel().OrderByDescending(x => x.Raiting);
-        //    //foreach (var item in executors)
-        //    //{
-        //    //    executorsViewModel.Add(ExecutorConvertor.ConvertToExecutorViewModel(item));
-        //    //}
-        //    ViewBag.SubcatId = IdSubcategory;
-        //    int pageSize = 2;
-        //    int pageNumber = (page ?? 1);
-
-        //    return View(executorsViewModel.ToPagedList(pageNumber, pageSize));
-        //}
-
-        //[HttpPost]
-        //public ActionResult Services(string nameService,int? IdSubcategory, string city, decimal? price, int? place, int? measure)
-        //{
-        //    IEnumerable<DomainExecutor> executors = new List<DomainExecutor>();
-        //    if (IdSubcategory != null)
-        //    {
-        //        executors = _serviceExecutor.GetExecutorsByIdSubcategory((int)IdSubcategory);
-        //    }
-        //    else
-        //    {
-        //        executors = _serviceExecutor.GetExecutorsForServicesViewByNameSubcategory(nameService);
-        //    }
-        //    if (!String.IsNullOrEmpty(city))
-        //    {
-        //        executors = executors.Where(x => x.City == city).ToList();
-        //    }
-        //    if (price != null)
-        //    {              
-        //        executors = executors.Where(x => x.Services.Any(y => y.Price <= price));
-        //    }
-        //    if (place != null && place != 0)
-        //    {              
-        //        executors = executors.Where(x => x.Services.Any(y => y.Place.ID == place));
-
-        //    }
-        //    if (measure != null && measure != 0)
-        //    {             
-        //        executors = executors.Where(x => x.Services.Any(y => y.Measure.ID == measure));
-        //    }
-        //    ViewBag.SubcatName = nameService;
-        //    ViewBag.SubcatId = IdSubcategory;
-
-        //    int pageSize = 2;
-        //    int pageNumber = 1;
-
-        //    return Request.IsAjaxRequest()
-        //      ? (ActionResult)PartialView("_ServicesPartial", executors.Where(x => x.IsBanned == false).ToList().ConvertToExecutorViewModel().OrderByDescending(x => x.Raiting).ToPagedList(pageNumber, pageSize))
-        //      : View(executors.Where(x => x.IsBanned == false).ToList().ConvertToExecutorViewModel().OrderByDescending(x => x.Raiting).ToPagedList(pageNumber, pageSize));
-        //}
-
+      
+        //Метод частичного представления, выводящий подробную информацию об услуге
         public ActionResult _ServiceDetailsPartial(int idservice)
         {
             var service = _serviceService.GetServicesByID(idservice);
             return PartialView(service.ConvertToServiceViewModel());
         }
 
-        public ActionResult _ChatPartial()
-        {
-            return PartialView();
-        }
-
+        //Метод, управляющий отображением страницы поддержки
         public ActionResult Support()
         {
 
             return View();
         }
 
+        //Метод, принимающий данные с формы для последующей отправки их на почту
         [HttpPost]
         public ActionResult Support(SupportViewModel model)
         {
@@ -228,6 +156,7 @@ namespace DiplomFreelance.Controllers
 
         }
 
+        //Метод, управляющий отображением страницы исполнителя
         public ActionResult Executor(string id)
         {
             var executor = _serviceExecutor.GetExecutorByIdUser(id);

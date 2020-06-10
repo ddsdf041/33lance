@@ -1,7 +1,85 @@
-﻿
+﻿@model DiplomFreelance.Models.FreelanceModels.ViewModel.SupportViewModel
+
 @{
     ViewBag.Title = "Support";
 }
 
-<h2>Support</h2>
+<div class="container">
+    <div class="row">
+        <div class="d-flex flex-column col-12 col-md-6 pr-md-5">
+            <div class="my-auto d-flex flex-column">
+                <p class="mt-4 h2 text-uppercase">С удовольствием выслушаем Вас</p>
+                <p class="mt-4 text-justify">Это форма обратной связи, если у вас возникли какие-либо вопросы или вы обнаружили какие-то ошибки при использовании нашей фриланс-площадки - обратитесь к нам и мы решим этот вопрос!</p>
+                <div class="row mt-3">
+                    <div class="col-6 col-md-3">
+                        <p class="font-weight-bold">Адрес:</p>
+                    </div>
+                    <div class="col-6 col-md-auto">
+                        <p class="">​ул. Пионерская, 5, Коломна, Россия</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 col-md-3">
+                        <p class="font-weight-bold">Почта:</p>
+                    </div>
+                    <div class="col-6 col-md-auto">
+                        <p><a href="mailto:your.hat3@gmail.com">support@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 col-md-3">
+                        <p class="font-weight-bold">Телефон:</p>
+                    </div>
+                    <div class="col-6 col-md-auto">
+                        <p class="">+7(967)-287-89-88</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center col-12 col-md-6">
+
+            @using (Html.BeginForm("Support", "Global", FormMethod.Post, new { id = "contact-form", @class = "mt-5", role = "form" }))
+            {
+                
+
+                <div class="row">
+                    <div class="col-12 pr-0">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "w-100 contact-input", placeholder = "Имя" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6 pr-0">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "w-100 contact-input", placeholder = "Эл. почта" })                      
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-6 pr-0">
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "w-100 contact-input", placeholder = "Телефон" })                 
+                        @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 pr-0">
+                        @Html.TextBoxFor(m => m.Theme, new { @class = "w-100 contact-input", placeholder = "Тема обращения" })              
+                        @Html.ValidationMessageFor(m => m.Theme, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12 pr-0">
+                        @Html.TextAreaFor(m => m.Message, new { @class = "w-100 contact-input", placeholder = "Добавьте сообщение..." })                       
+                        @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12 pr-0">
+                        <input type="submit" class="bttn btn btn-lg rounded-pill text-success font-weight-bold w-100" placeholder="Отправить" />
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
 

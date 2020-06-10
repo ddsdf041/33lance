@@ -48,6 +48,7 @@ namespace DiplomFreelance.Controllers
             _serviceFileOrder = serviceFileOrder;
         }
 
+        //Метод, который проверяет забанен ли заказчик
         private void CheckStatusCustomer()
         {
             if (_serviceCustomer.GetCustomerByUserID(User.Identity.GetUserId()).IsBanned)
@@ -56,6 +57,7 @@ namespace DiplomFreelance.Controllers
             }
         }
 
+        //Метод, служащий для вывода категорий
         public ActionResult _OrderCategoryPartial(int? idCategory)
         {
             CheckStatusCustomer();
@@ -75,7 +77,7 @@ namespace DiplomFreelance.Controllers
         }
 
 
-
+        //Метод контроллера, который управляет отоблажением страницы создания заказа
         [HttpGet]
         public ActionResult Order(string idexec)
         {
@@ -96,6 +98,7 @@ namespace DiplomFreelance.Controllers
             }
         }
 
+        //Метод, принимающий данные с формы для создания заказа
         [HttpPost]
         public ActionResult Order(CreateOrderViewModel model)
         {
@@ -153,7 +156,7 @@ namespace DiplomFreelance.Controllers
             return RedirectToAction("Register", "Account");
         }
 
-
+        //Метод контроллера, который выводит все заказы заказчика, относительно входных параметров
         public ActionResult MyOrders(string message, int? idStatus, bool? isBanned)
        {
             CheckStatusCustomer();
@@ -188,6 +191,7 @@ namespace DiplomFreelance.Controllers
 
         }
 
+        //Метод, удалающий заказ из бд
         public ActionResult DeleteOrder(Guid idOrder)
         {
             CheckStatusCustomer();
@@ -212,6 +216,7 @@ namespace DiplomFreelance.Controllers
 
         }
 
+        //Метод, который добавляет к заказу выбранного исполнителя
         public ActionResult SetExecutor(Guid idOrder, string idExec, decimal budget)
         {
             CheckStatusCustomer();
@@ -231,6 +236,8 @@ namespace DiplomFreelance.Controllers
             return RedirectToAction("MyOrders", "Customer", new { message = "Ваш заказ заблокирован!"});
 
         }
+
+        //Метод, который меняет статус определенному заказу на завершенный
         public ActionResult CompleteOrder(Guid idOrder)
         {
             CheckStatusCustomer();

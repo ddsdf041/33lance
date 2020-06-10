@@ -19,7 +19,7 @@
 
 
     <div class="row mt-5">
-        <div class="col-3">
+        <div class="col-12 col-md-3">
             <div class="border-def rounded-lg">
                 <a href="@Url.Action("ChangeExecutorProfile", "Manage")"> <img title="Редактирование профиля" src="@Model.Photo" class="img-responsive rounded-lg w-100 h-100" /></a>
                 <p class="h5 text-center mt-2">@Model.Name</p>
@@ -28,12 +28,12 @@
                
             </div>
         </div>
-        <div class="col-8">
-            <div class="border-def rounded-lg p-3 h-100">
+        <div class="col-12 col-md-8 ">
+            <div class="border-def rounded-lg p-3 h-100 mt-3 mt-md-0">
                 <h4 class="text-center">Основная информация</h4>
                 <hr />
                 <div class="row mt-4">
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <p class=""><b>Телефон:</b></p>
                     </div>
                     <div class="col">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <p class=""><b>Email:</b></p>
                     </div>
                     <div class="col">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <p class=""><b>Образование:</b></p>
                     </div>
                     <div class="col">
@@ -58,8 +58,8 @@
                 </div>
                 <h4 class="text-center">О себе</h4>
                 <p>@Model.Description</p>
-                <div>
-                    <a class="" href="@Url.Action("ChangeExecutorProfile", "Manage")"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Изменить профиль</a>
+                <div class="d-flex flex-column">
+                    <a href="@Url.Action("ChangeExecutorProfile", "Manage")"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Изменить профиль</a>
                     <a href="@Url.Action("ChangePassword","Manage")" class="" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Изменить пароль аккаунта</a>
                 </div> 
                
@@ -70,15 +70,15 @@
     @foreach (var item in Model.Services.GroupBy(x => new { ID_Category = x.ID_Category, NameCategory = x.NameCategory }))
     {
 
-        <div class="row mt-3 ">
-            <div class="offset-3 col-8 accordion" id="accordionCategory">
-                <div class="border-def rounded-lg p-3">
+        <div class="row mt-3">
+            <div class="offset-md-3 col-12 col-md-8 accordion" id="accordionCategory">
+                <div class="border-def rounded-lg p-3 mt-3 mt-md-0">
                     <div class="d-flex flex-row align-items-center def-link-text" data-toggle="collapse" data-target="#collapseCategory_@item.Key.ID_Category" aria-expanded="false" aria-controls="collapseOne">
-                        <div class="col-8">
+                        <div class="col-10">
                             <h3 class="text-dark">@item.Key.NameCategory</h3>
                         </div>
                         <div class="col">
-                            <i class="fa fa-chevron-down fa-2x float-right text-muted" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-down fa-md-x2 float-right text-muted" aria-hidden="true"></i>
                         </div>
                     </div>
 
@@ -86,22 +86,23 @@
                         @foreach (var itemService in item)
                         {
                             <hr />
-                            <div class="row p-2">
-                                <div class="col-8 ">
+                            <div class="d-flex flex-column p-2">
 
-                                    @Ajax.ActionLink(itemService.Name, "_ServiceDetailsPartial", "Executor",
-                                    new { id = itemService.ID },
-                                    new AjaxOptions { UpdateTargetId = "resultDetails", OnComplete = "ShowDetails()" }, htmlAttributes: new { @class = "h4" })
+                                @Ajax.ActionLink(itemService.Name, "_ServiceDetailsPartial", "Executor",
+                                   new { id = itemService.ID },
+                                   new AjaxOptions { UpdateTargetId = "resultDetails", OnComplete = "ShowDetails()" }, htmlAttributes: new { @class = "h4" })
 
-                                </div>
-                                <div class="col-8">
-                                    <p class="">@itemService.NameSubcategory </p>
-                                </div>
-                                <div class="col-8">
-                                    <p class="">@itemService.Price <i class="fa fa-rub" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
+                                <p class="mt-2">@itemService.NameCategory  •  @itemService.NameSubcategory</p>
 
+                                <div class="row">
+                                    <div class="col-8">
+                                        <p class="font-weight-bold">Стоимость:</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="float-right">@itemService.Price <i class="fa fa-rub" aria-hidden="true"></i></p>
+                                    </div>
+                                </div>
+                            </div>                         
                         }
                     </div>
                 </div>
@@ -109,8 +110,8 @@
         </div>
     }
     <div class="row mt-3">
-        <a class="offset-3 col-8 text-decoration-none" href="@Url.Action("CreateNewService", "Executor")">
-            <div class="border-dash rounded-lg p-3">
+        <a class="offset-md-3 col-12 col-md-8 text-decoration-none" href="@Url.Action("CreateNewService", "Executor")">
+            <div class="border-dash rounded-lg p-3 mt-3 mt-md-0">
                 <h4 class="text-center text-uppercase text-muted font-weight-bold ">Добавить новую услугу</h4>
             </div>
         </a>

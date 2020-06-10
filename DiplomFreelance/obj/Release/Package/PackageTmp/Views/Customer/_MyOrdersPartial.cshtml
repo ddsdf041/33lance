@@ -25,10 +25,10 @@
                     @if (order.IsBanned == true)
                     {
 
-                        <p class="card-title heading-def">@order.Name</p>
+                        <p class="card-title heading-def h4">@order.Name</p>
                         <p>@order.Category  •  @order.Subcategory</p>
-                        <div class="d-flex flex-row align-items-center">
-                            <div class="col-3 p-0">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-3">
                                 <p class="alert-danger text-center rounded-pill p-1">Заблокирован <i class="fa fa-lock" aria-hidden="true"></i></p>
                             </div>
                             <div class="col">
@@ -45,10 +45,10 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
 
-                        <p class="card-title heading-def">@order.Name</p>
+                        <p class="card-title heading-def h4">@order.Name</p>
                         <p>@order.Category  •  @order.Subcategory</p>
-                        <div class="d-flex flex-row align-items-center">
-                            <div class="col-3 p-0">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-3">
                                 @switch (order.Status)
                                 {
                                     case "Опубликован":
@@ -162,12 +162,12 @@
                                                 @foreach (var response in order.Responses)
                                                 {
                                                     <div class="row border rounded-lg p-2 mr-1 ml-1 mt-2">
-                                                        <div class="col-2">
+                                                        <div class="col-12 col-md-3">
                                                             <img src="@response.Executor.Photo" alt="" class="img-responsive rounded w-100" />
                                                             <p class="text-center h6"> <i class="fa fa-star" aria-hidden="true" style="color:#28a745"></i> @response.Executor.Raiting</p>
                                                         </div>
                                                         <div class="col">
-                                                            <div class="d-flex">
+                                                            <div class="d-md-flex">
                                                                 <a class="h5" href="@Url.Action("Executor", "Global", new { id = order.Executor.ID_User })">@response.Executor.Name</a>
                                                                 <p class="text-muted ml-auto">@response.Date.ToShortDateString()</p>
 
@@ -181,7 +181,7 @@
                                                         <div class="col-12 bg-light p-2">
                                                             <div class="float-right">
                                                                 <a class="btn btn-outline-info rounded-pill" href="#"><i class="fa fa-comments-o fa-lg" aria-hidden="true"></i> Чат</a>
-                                                                <a class="btn btn-outline-success rounded-pill" href="@Url.Action("SetExecutor", "Customer", new { idExec = response.Executor.ID_User, idOrder = order.ID, budget = response.Price })">Назначить исполнителем</a>
+                                                                <a class="btn btn-outline-success rounded-pill" href="@Url.Action("SetExecutor", "Customer", new { idExec = response.Executor.ID_User, idOrder = order.ID, budget = response.Price })">Выбрать</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -202,7 +202,7 @@
                                         <hr />
                                         <p class="h4">Исполнитель</p>
                                         <div class="row border rounded-lg p-2 mr-1 ml-1 mt-3 mb-3">
-                                            <div class="col-2">
+                                            <div class="col-12 col-md-3">
                                                 <img src="@order.Executor.Photo" alt="" class="img-responsive rounded w-100" />
                                                 <p class="text-center h6"> <i class="fa fa-star" aria-hidden="true" style="color:#28a745"></i> @order.Executor.Raiting</p>
                                             </div>
@@ -216,7 +216,7 @@
                                             <div class="col-12 bg-light p-2">
                                                 <div class="float-right">
                                                     <a class="btn btn-outline-success rounded-pill float-right" href="@Url.Action("Executor", "Global", new { id = order.Executor.ID_User })"><i class="fa fa-user" aria-hidden="true"></i> Профиль</a>
-                                                    <a class="btn btn-outline-info rounded-pill float-right mr-1" href="#" onclick="OpenChat('@order.Executor.ID_User')"><i class="fa fa-comments-o fa-lg" aria-hidden="true"></i> Чат</a>
+                                                    <a class="btn btn-outline-info rounded-pill float-right mr-1 mt-2 mt-md-0" href="#" onclick="OpenChat('@order.Executor.ID_User')"><i class="fa fa-comments-o fa-lg" aria-hidden="true"></i> Чат</a>
                                                 </div>
                                             </div>
                                         </div>
